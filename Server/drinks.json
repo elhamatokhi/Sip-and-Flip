@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Espresso",
+    "description": "Strong and bold single shot of coffee.",
+    "price": 2
+  },
+  {
+    "name": "Double Espresso",
+    "description": "Twice the kick of a regular espresso.",
+    "price": 3
+  },
+  {
+    "name": "Cappuccino",
+    "description": "Espresso with steamed milk and foam.",
+    "price": 3.5
+  },
+  {
+    "name": "Latte",
+    "description": "Espresso with lots of steamed milk.",
+    "price": 3.8
+  },
+  {
+    "name": "Mocha",
+    "description": "Espresso with chocolate and steamed milk.",
+    "price": 4
+  },
+  {
+    "name": "Macchiato",
+    "description": "Espresso marked with a small amount of foam.",
+    "price": 2.8
+  },
+  {
+    "name": "Flat White",
+    "description": "Smooth blend of espresso and milk.",
+    "price": 3.7
+  },
+  {
+    "name": "Iced Coffee",
+    "description": "Cold brewed coffee over ice.",
+    "price": 3
+  },
+  {
+    "name": "Cold Brew",
+    "description": "Slow-steeped cold brew coffee.",
+    "price": 3.8
+  },
+  {
+    "name": "Iced Latte",
+    "description": "Chilled espresso and milk over ice.",
+    "price": 4
+  },
+  {
+    "name": "Frappuccino",
+    "description": "Blended iced coffee drink.",
+    "price": 4.5
+  },
+  {
+    "name": "Matcha Latte",
+    "description": "Green tea powder with steamed milk.",
+    "price": 4.2
+  },
+  {
+    "name": "Chai Latte",
+    "description": "Spiced tea with steamed milk.",
+    "price": 3.9
+  },
+  {
+    "name": "Herbal Tea",
+    "description": "Caffeine-free tea blend.",
+    "price": 2.5
+  },
+  {
+    "name": "Green Tea",
+    "description": "Light and refreshing green tea.",
+    "price": 2.7
+  },
+  {
+    "name": "Black Tea",
+    "description": "Classic strong black tea.",
+    "price": 2.6
+  },
+  {
+    "name": "Iced Tea",
+    "description": "Sweetened or unsweetened cold tea.",
+    "price": 3
+  },
+  {
+    "name": "Hot Chocolate",
+    "description": "Creamy cocoa drink with milk.",
+    "price": 3.2
+  },
+  {
+    "name": "Milkshake Vanilla",
+    "description": "Classic vanilla milkshake.",
+    "price": 4
+  },
+  {
+    "name": "Milkshake Chocolate",
+    "description": "Creamy chocolate milkshake.",
+    "price": 4.2
+  },
+  {
+    "name": "Strawberry Smoothie",
+    "description": "Fruit blend with strawberries and yogurt.",
+    "price": 4.5
+  },
+  {
+    "name": "Mango Smoothie",
+    "description": "Tropical mango drink with ice.",
+    "price": 4.5
+  },
+  {
+    "name": "Orange Juice",
+    "description": "Freshly squeezed orange juice.",
+    "price": 3
+  },
+  {
+    "name": "Lemonade",
+    "description": "Zesty homemade lemonade.",
+    "price": 2.8
+  },
+  {
+    "name": "Sparkling Water",
+    "description": "Bubbly and refreshing.",
+    "price": 1.5
+  },
+  {
+    "name": "Still Water",
+    "description": "Pure mineral water.",
+    "price": 1.2
+  },
+  {
+    "name": "Energy Drink",
+    "description": "Caffeinated energy boost.",
+    "price": 3
+  },
+  {
+    "name": "Coconut Water",
+    "description": "Naturally hydrating tropical drink.",
+    "price": 3.5
+  },
+  {
+    "name": "Ginger Tea",
+    "description": "Spicy and soothing ginger tea.",
+    "price": 2.8
+  },
+  {
+    "name": "Affogato",
+    "description": "Vanilla ice cream topped with espresso.",
+    "price": 4.2
+  }
+]
