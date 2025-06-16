@@ -2,151 +2,181 @@
   {
     "name": "Espresso",
     "description": "Strong and bold single shot of coffee.",
-    "price": 2
+    "price": 2,
+    "category": "coffee"
   },
   {
     "name": "Double Espresso",
     "description": "Twice the kick of a regular espresso.",
-    "price": 3
+    "price": 3,
+    "category": "coffee"
   },
   {
     "name": "Cappuccino",
     "description": "Espresso with steamed milk and foam.",
-    "price": 3.5
+    "price": 3.5,
+    "category": "coffee"
   },
   {
     "name": "Latte",
     "description": "Espresso with lots of steamed milk.",
-    "price": 3.8
+    "price": 3.8,
+    "category": "coffee"
   },
   {
     "name": "Mocha",
     "description": "Espresso with chocolate and steamed milk.",
-    "price": 4
+    "price": 4,
+    "category": "chocolate"
   },
   {
     "name": "Macchiato",
     "description": "Espresso marked with a small amount of foam.",
-    "price": 2.8
+    "price": 2.8,
+    "category": "coffee"
   },
   {
     "name": "Flat White",
     "description": "Smooth blend of espresso and milk.",
-    "price": 3.7
+    "price": 3.7,
+    "category": "coffee"
   },
   {
     "name": "Iced Coffee",
     "description": "Cold brewed coffee over ice.",
-    "price": 3
+    "price": 3,
+    "category": "coffee"
   },
   {
     "name": "Cold Brew",
     "description": "Slow-steeped cold brew coffee.",
-    "price": 3.8
+    "price": 3.8,
+    "category": "coffee"
   },
   {
     "name": "Iced Latte",
     "description": "Chilled espresso and milk over ice.",
-    "price": 4
+    "price": 4,
+    "category": "coffee"
   },
   {
     "name": "Frappuccino",
     "description": "Blended iced coffee drink.",
-    "price": 4.5
+    "price": 4.5,
+    "category": "coffee"
   },
   {
     "name": "Matcha Latte",
     "description": "Green tea powder with steamed milk.",
-    "price": 4.2
+    "price": 4.2,
+    "category": "soft drink"
   },
   {
     "name": "Chai Latte",
     "description": "Spiced tea with steamed milk.",
-    "price": 3.9
+    "price": 3.9,
+    "category": "soft drink"
   },
   {
     "name": "Herbal Tea",
     "description": "Caffeine-free tea blend.",
-    "price": 2.5
+    "price": 2.5,
+    "category": "soft drink"
   },
   {
     "name": "Green Tea",
     "description": "Light and refreshing green tea.",
-    "price": 2.7
+    "price": 2.7,
+    "category": "soft drink"
   },
   {
     "name": "Black Tea",
     "description": "Classic strong black tea.",
-    "price": 2.6
+    "price": 2.6,
+    "category": "soft drink"
   },
   {
     "name": "Iced Tea",
     "description": "Sweetened or unsweetened cold tea.",
-    "price": 3
+    "price": 3,
+    "category": "soft drink"
   },
   {
     "name": "Hot Chocolate",
     "description": "Creamy cocoa drink with milk.",
-    "price": 3.2
+    "price": 3.2,
+    "category": "chocolate"
   },
   {
     "name": "Milkshake Vanilla",
     "description": "Classic vanilla milkshake.",
-    "price": 4
+    "price": 4,
+    "category": "soft drink"
   },
   {
     "name": "Milkshake Chocolate",
     "description": "Creamy chocolate milkshake.",
-    "price": 4.2
+    "price": 4.2,
+    "category": "chocolate"
   },
   {
     "name": "Strawberry Smoothie",
     "description": "Fruit blend with strawberries and yogurt.",
-    "price": 4.5
+    "price": 4.5,
+    "category": "soft drink"
   },
   {
     "name": "Mango Smoothie",
     "description": "Tropical mango drink with ice.",
-    "price": 4.5
+    "price": 4.5,
+    "category": "soft drink"
   },
   {
     "name": "Orange Juice",
     "description": "Freshly squeezed orange juice.",
-    "price": 3
+    "price": 3,
+    "category": "soft drink"
   },
   {
     "name": "Lemonade",
     "description": "Zesty homemade lemonade.",
-    "price": 2.8
+    "price": 2.8,
+    "category": "soft drink"
   },
   {
     "name": "Sparkling Water",
     "description": "Bubbly and refreshing.",
-    "price": 1.5
+    "price": 1.5,
+    "category": "soft drink"
   },
   {
     "name": "Still Water",
     "description": "Pure mineral water.",
-    "price": 1.2
+    "price": 1.2,
+    "category": "soft drink"
   },
   {
     "name": "Energy Drink",
     "description": "Caffeinated energy boost.",
-    "price": 3
+    "price": 3,
+    "category": "soft drink"
   },
   {
     "name": "Coconut Water",
     "description": "Naturally hydrating tropical drink.",
-    "price": 3.5
+    "price": 3.5,
+    "category": "soft drink"
   },
   {
     "name": "Ginger Tea",
     "description": "Spicy and soothing ginger tea.",
-    "price": 2.8
+    "price": 2.8,
+    "category": "soft drink"
   },
   {
     "name": "Affogato",
     "description": "Vanilla ice cream topped with espresso.",
-    "price": 4.2
+    "price": 4.2,
+    "category": "coffee"
   }
 ]
