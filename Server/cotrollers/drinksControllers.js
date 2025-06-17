@@ -8,9 +8,17 @@ const __dirname = path.dirname(__filename)
 
 export const loadDrinks = () => {
   const drinksJson = readFileSync(
-    path.join(__dirname, '../drinks.json'),
+    path.join(__dirname, '../data/drinks.json'),
     'utf-8'
   )
   let drinks = JSON.parse(drinksJson)
   return drinks
+}
+
+// Get a random Drink
+export const getRandomDrink = (req, res) => {
+  const drinks = loadDrinks()
+  const randomIndex = Math.floor(Math.random() * drinks.length)
+  const randomDrink = drinks[randomIndex]
+  res.json(randomDrink)
 }
