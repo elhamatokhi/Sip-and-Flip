@@ -1,33 +1,26 @@
 <%- include('partials/header',{title: 'HOME'}) %>
 <div class="main-container">
   <h1>Good Day, <%= username %></h1>
-</div>
-<div class="bestSeller">
-  <p>Best seller to be added</p>
-  <a href="#">More info</a>
-</div>
-<div class="week">
-  <div class="random-drink">
-    <h2>This week's recommendations <a href="#">See all</a></h2>
-    <p><strong><%= randomDrink.name %></strong></p>
-    <p><%= randomDrink.description %></p>
-    <p><strong>€<%= randomDrink.price %></strong></p>
+
+  <div class="bestSeller">
+    <p>Best seller to be added</p>
+    <a href="#">More info</a>
   </div>
 
-  <div class="random-drink">
-    <h2>This week's recommendations <a href="#">See all</a></h2>
-    <p><strong><%= randomDrink.name %></strong></p>
-    <p><%= randomDrink.description %></p>
-    <p><strong>€<%= randomDrink.price %></strong></p>
+  <div class="week">
+    <h2>This week's recommendations <a href="#" class="see-all">See all</a></h2>
+
+    <div class="content-wrapper">
+      <div class="random-drink">
+        <p><strong><%= randomDrink.name %></strong></p>
+        <p><%= randomDrink.description %></p>
+        <p><strong>€<%= randomDrink.price %></strong></p>
+      </div>
+
+      <div class="random-tagline">
+        <em><%= randomTagline %></em>
+      </div>
+    </div>
   </div>
 </div>
-
-<nav class="navbar">
-  <ul class="nav-links" id="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/drinksMenu">Drink Menu</a></li>
-    <li><a href="/orders">Your Orders</a></li>
-    <li><a href="/favorites">Favorites</a></li>
-  </ul>
-</nav>
 <%- include('partials/footer') %>

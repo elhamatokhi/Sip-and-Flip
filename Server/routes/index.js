@@ -22,7 +22,20 @@ router.get('/', (req, res) => {
   const randomIndex = Math.floor(Math.random() * drinks.length)
   const randomDrink = drinks[randomIndex]
 
-  res.render('index', { username: currentUser.username, randomDrink })
+  // Load taglines from the JSON file
+  const taglines = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '../data/taglines.json'), 'utf8')
+  )
+
+  // Pick a random tagline
+  const randomTagline = taglines[Math.floor(Math.random() * taglines.length)]
+
+  console.log(randomTagline)
+  res.render('index', {
+    username: currentUser.username,
+    randomDrink,
+    randomTagline
+  })
 })
 
 // Get All Drinks with filtering
