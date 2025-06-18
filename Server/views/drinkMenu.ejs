@@ -17,7 +17,17 @@
       <div class="drink-info">
         <h3><%= p.name %></h3>
         <p><%= p.description %></p>
-        <span class="drink-price">€<%= p.price.toFixed(2) %></span>
+        <div class="heart-wrapper">
+          <span class="drink-price">€<%= p.price.toFixed(2) %></span
+          ><!-- Favorite button -->
+          <button
+            class="heart-toggle"
+            aria-label="Toggle Favorite"
+            data-id="<%= p._id %>"
+          >
+            🤍
+          </button>
+        </div>
       </div>
     </div>
     <% }); %>
