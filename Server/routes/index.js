@@ -42,7 +42,14 @@ router.get('/', (req, res) => {
 router.get('/drinksMenu', (req, res) => {
   let drinks = loadDrinks()
 
-  res.render('drinkMenu', { drinks })
+  //  filter the drinks
+  console.log(req.query)
+  const selectedCategory = req.query.category || ''
+  if (selectedCategory) {
+    drinks = drinks.filter(p => p.category === selectedCategory)
+  }
+
+  res.render('drinkMenu', { drinks, selectedCategory })
 })
 
 // Get best seller of the week

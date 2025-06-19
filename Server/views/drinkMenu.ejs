@@ -1,34 +1,37 @@
 <%- include('partials/header',{title: 'Drinks MENU'}) %>
 <div class="container">
-  <div>
-    <a href="/coffee">Coffee</a>
-    <a href="/chocolate">Chocolate</a>
-    <a href="/others">Others</a>
+  <input type="text" placeholder="Search..." class="search" />
+
+  <div class="category-links">
+    <a
+      href="/drinksMenu?category=coffee"
+      class="<%= selectedCategory === 'coffee' ? 'active' : '' %>"
+      >Coffee</a
+    >
+
+    <a
+      href="/drinksMenu?category=chocolate"
+      class="<%= selectedCategory === 'chocolate' ? 'active' : '' %>"
+      >Chocolate</a
+    >
+    <a
+      href="/drinksMenu?category=soft drink"
+      class="<%= selectedCategory === 'soft drink' ? 'active' : '' %>"
+      >Soft Drink</a
+    >
   </div>
 
   <div class="drinks-container">
     <% drinks.forEach((p, index) => { %>
     <div class="drink-card">
-      <img
-        src="<%= p.image || '/images/default-drink.jpg' %>"
-        alt="<%= p.name %> image"
-        class="drink-image"
-      />
+      <img src="<%= p.image %>" alt="<%= p.name %> image" class="drink-image" />
       <div class="drink-info">
         <h3><%= p.name %></h3>
         <p><%= p.description %></p>
-        <div class="heart-wrapper">
-          <span class="drink-price">€<%= p.price.toFixed(2) %></span
-          ><!-- Favorite button -->
-          <button
-            class="heart-toggle"
-            aria-label="Toggle Favorite"
-            data-id="<%= p._id %>"
-          >
-            🤍
-          </button>
-        </div>
+
+        <span class="drink-price">€<%= p.price.toFixed(2) %></span>
       </div>
+      <i class="fa-solid fa-square-plus fa-2xl" class="heart-toggle"></i>
     </div>
     <% }); %>
   </div>
