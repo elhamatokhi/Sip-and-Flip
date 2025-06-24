@@ -15,6 +15,22 @@ export const loadDrinks = () => {
   return drinks
 }
 
+// Helper to load existing orders
+export const loadOrders = () => {
+  const ordersFile = path.join(__dirname, '../data/orders.json')
+  if (!fs.existsSync(ordersFile)) {
+    return [] // Return empty if file doesn't exist
+  }
+  const data = fs.readFileSync(ordersFile, 'utf-8')
+
+  try {
+    return JSON.parse(data)
+  } catch (err) {
+    console.error('Error parsing orders.json:', err)
+    return [] // Fail-safe fallback
+  }
+}
+
 // Get a random Drink
 export const getRandomDrink = (req, res) => {
   const drinks = loadDrinks()

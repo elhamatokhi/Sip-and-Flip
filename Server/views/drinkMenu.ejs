@@ -31,7 +31,28 @@
 
         <span class="drink-price">€<%= p.price.toFixed(2) %></span>
       </div>
-      <i class="fa-solid fa-square-plus fa-2xl" class="heart-toggle"></i>
+
+      <form action="/order" method="POST" class="order-from">
+        <input type="hidden" name="image" value="<%= p.image  %>" />
+        <input
+          type="number"
+          name="amount"
+          value="1"
+          min="1"
+          required
+          class="amount-input"
+        />
+        <input type="hidden" name="name" value="<%= p.name  %>" />
+        <input type="hidden" name="" id="" />
+        <input
+          type="hidden"
+          name="date"
+          value="<%= new Date().toISOString() %>"
+        />
+        <button type="submit" class="order-button">
+          <i class="fa-solid fa-square-plus fa-2xl order-button"></i>
+        </button>
+      </form>
     </div>
     <% }); %>
   </div>

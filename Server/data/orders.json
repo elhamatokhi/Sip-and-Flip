@@ -1,14 +1,16 @@
 [
   {
-    "drinkId": 2,
-    "date": "2025-06-13T14:21:00Z"
+    "id": 1750796963843,
+    "name": "Espresso",
+    "image": "/images/Rectangle.png",
+    "date": "2025-06-24T20:29:22.377Z",
+    "amount": "1"
   },
   {
-    "drinkId": 2,
-    "date": "2025-06-14T10:05:00Z"
-  },
-  {
-    "drinkId": 1,
-    "date": "2025-06-14T12:45:00Z"
+    "id": 1750796967274,
+    "name": "Double Espresso",
+    "image": "/images/Rectangle (3).png",
+    "date": "2025-06-24T20:29:26.266Z",
+    "amount": "1"
   }
 ]

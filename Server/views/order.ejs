@@ -1,9 +1,57 @@
 <%- include('partials/header',{title: 'Orders'}) %>
 <div class="orders">
-  <div>order and details and date</div>
-  <div>order and details and date</div>
-  <div>order and details and date</div>
-  <div>order and details and date</div>
-  <div>order and details and date</div>
+  <div class="orders-categories">
+    <a href="#">Recently</a>
+
+    <a href="#">Past orders</a>
+  </div>
+
+  <div class="orders-list">
+    <% orders.forEach(order => { %>
+    <div class="order-item">
+      <img
+        src="<%= order.image %>"
+        alt="<%= order.name %> image"
+        class="order-image"
+      />
+      <div class="order-info">
+        <p>Amount: <%= order.amount %></p>
+        <h4><%= order.name %></h4>
+        <a
+          href="/orders/<%= order.id %>"
+          class="view-details"
+          data-id="<%= order.id %>"
+          data-name="<%= order.name %>"
+          data-image="<%= order.image %>"
+          data-description="<%= order.description %>"
+          data-price="<%= order.price %>"
+        >
+          View Details
+        </a>
+      </div>
+      <p><%= new Date(order.date).toISOString() %></p>
+    </div>
+    <% }); %>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="order-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-btn">&times;</button>
+      <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+      <img id="modal-image" src="" alt="Drink image" />
+      <h2 id="modal-name"></h2>
+      <p id="modal-description"></p>
+      <p><strong>Price:</strong> €<span id="modal-price"></span></p>
+
+      <div class="quantity-selector">
+        <button id="decrease">−</button>
+        <span id="quantity">1</span>
+        <button id="increase">+</button>
+      </div>
+
+      <button class="buy-btn">Buy Now</button>
+    </div>
+  </div>
+  <%- include('partials/footer') %>
 </div>
-<%- include('partials/footer') %>
