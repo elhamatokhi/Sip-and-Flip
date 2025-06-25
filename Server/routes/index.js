@@ -1,7 +1,6 @@
 import { Router } from 'express'
 import fs, { read } from 'fs'
 import path from 'path'
-import { readFileSync } from 'fs'
 import { fileURLToPath } from 'url'
 import {
   getRandomDrink,
