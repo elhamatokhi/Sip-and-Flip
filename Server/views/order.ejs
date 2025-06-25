@@ -29,7 +29,11 @@
           View Details
         </a>
       </div>
-      <p><%= new Date(order.date).toISOString() %></p>
+      <% if (order.date) { %>
+      <p><%= new Date(order.date).toLocaleString() %></p>
+      <% } else { %>
+      <p>Date not available</p>
+      <% } %>
     </div>
     <% }); %>
   </div>

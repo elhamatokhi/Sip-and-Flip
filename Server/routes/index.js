@@ -92,8 +92,8 @@ router.get('/orders', (req, res) => {
 
 // GET Drink Details
 router.get('/orders/:id', (req, res) => {
-  const orders = loadDrinks()
-  const ID = req.params.id
+  const orders = loadOrders()
+  const ID = Number(req.params.id)
 
   const order = orders.find(o => o.id === ID)
   if (!order) {
@@ -106,13 +106,9 @@ router.get('/orders/:id', (req, res) => {
 router.get('/favorites', (req, res) => {
   res.render('favorites')
 })
-// Add Drinks to Favorties
 
 // Get a random drink
 router.get('/random', getRandomDrink)
-// Get Favorites
-
-// POST favorite drinks
 
 // Contact page
 router.get('/contact', (req, res) => {
@@ -125,5 +121,9 @@ router.post('/contact', (req, res) => {
 
   res.send(`<h1>Thank you, ${name}! We received your message.</h1>`)
 })
+
+// Add Drinks to Favorties
+// Get Favorites
+// POST favorite drinks
 
 export default router

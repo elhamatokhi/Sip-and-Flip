@@ -8,11 +8,9 @@
   <div class="drink-info">
     <h3><%= order.name %></h3>
     <p><%= order.description %></p>
-
-    <span class="drink-price">€<%= order.price.toFixed(2) %></span>
   </div>
 
-  <form action="/order" method="POST" class="order-from">
+  <form action="/order" method="POST" class="order-form">
     <input type="hidden" name="image" value="<%= order.image  %>" />
     <input
       type="number"

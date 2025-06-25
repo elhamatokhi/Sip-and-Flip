@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalNameInput = document.getElementById('modalNameInput')
   const drinkPop = document.querySelector('.drink-pop')
 
+  const hamburger = document.getElementById('hamburger')
+  const navLinks = document.getElementById('nav-links')
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show')
+  })
+
   // Show modal on drink click
   document.querySelectorAll('.random-drink').forEach(card => {
     card.addEventListener('click', () => {

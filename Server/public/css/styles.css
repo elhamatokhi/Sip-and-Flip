@@ -605,9 +605,67 @@ h1 {
   background-color: #ff6347;
 }
 
+/* Contact form */
+.contact-form {
+  /* max-width: 40rem; */
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #9085098b;
+}
+
+.contact-form button {
+  padding: 0.75rem 2rem;
+  background-color: #908409;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3e330a;
+}
+
+/* Drink details */
+.drink-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 /* For smaller screens */
 @media (max-width: 768px) {
-  .navbar > .notification,
   .navbar > .hamburger {
     display: block;
   }
@@ -645,5 +703,8 @@ h1 {
   .drink-card {
     display: flex;
     width: auto;
+  }
+  .contact-form {
+    padding: 1.5rem;
   }
 }
