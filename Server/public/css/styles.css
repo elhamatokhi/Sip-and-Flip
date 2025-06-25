@@ -575,13 +575,12 @@ h1 {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  justify-content: space-around;
-}
-form {
-  display: flex;
   justify-content: space-between;
 }
-
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
 .amount-input {
   width: 60px;
   padding: 6px 10px;

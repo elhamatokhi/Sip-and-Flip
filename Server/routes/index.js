@@ -114,4 +114,16 @@ router.get('/random', getRandomDrink)
 
 // POST favorite drinks
 
+// Contact page
+router.get('/contact', (req, res) => {
+  res.render('contact')
+})
+
+router.post('/contact', (req, res) => {
+  const { name, email, message } = req.body
+  console.log('Contact form submitted:', { name, email, message })
+
+  res.send(`<h1>Thank you, ${name}! We received your message.</h1>`)
+})
+
 export default router
