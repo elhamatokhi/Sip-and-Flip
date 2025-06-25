@@ -20,7 +20,7 @@ const users = JSON.parse(
 
 // HOME
 router.get('/', (req, res) => {
-  const currentUser = users[0]
+  const currentUser = users[1]
 
   const drinks = loadDrinks()
   const randomIndex = Math.floor(Math.random() * drinks.length)

@@ -1,43 +1,46 @@
-const modal = document.getElementById('order-modal')
-const modalImage = document.getElementById('modal-image')
-const modalName = document.getElementById('modal-name')
-const modalDescription = document.getElementById('modal-description')
-const modalPrice = document.getElementById('modal-price')
-const quantityDisplay = document.getElementById('quantity')
-const closeBtn = document.querySelector('.close-btn')
-const heartBtn = document.querySelector('.heart-btn')
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('drinkModal')
+  const closeModal = document.getElementById('closeModal')
+  const modalName = document.getElementById('modalName')
+  const modalDescription = document.getElementById('modalDescription')
+  const modalPrice = document.getElementById('modalPrice')
+  const modalImage = document.getElementById('modalImage')
+  const modalAmountInput = document.getElementById('modalAmountInput')
+  const modalImageInput = document.getElementById('modalImageInput')
+  const modalNameInput = document.getElementById('modalNameInput')
+  const drinkPop = document.querySelector('.drink-pop')
 
-let currentQuantity = 1
+  // Show modal on drink click
+  document.querySelectorAll('.random-drink').forEach(card => {
+    card.addEventListener('click', () => {
+      const name = card.dataset.name
+      const description = card.dataset.description
+      const price = card.dataset.price
+      const image = card.dataset.image
 
-document.querySelectorAll('.view-details').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault()
-    currentQuantity = 1
-    quantityDisplay.textContent = currentQuantity
+      // Set background image here
+      drinkPop.style.backgroundImage = `url(${image})`
 
-    modalImage.src = link.dataset.image
-    modalName.textContent = link.dataset.name
-    modalDescription.textContent = link.dataset.description
-    modalPrice.textContent = parseFloat(link.dataset.price).toFixed(2)
+      modalName.textContent = name
+      modalDescription.textContent = description
+      modalPrice.textContent = '€' + price
 
-    modal.classList.remove('hidden')
+      // Form fields
+      modalNameInput.value = name
+      modalImageInput.value = image
+      modalAmountInput.value = 1
+
+      modal.classList.remove('hidden')
+    })
   })
-})
 
-document.getElementById('increase').onclick = () => {
-  currentQuantity++
-  quantityDisplay.textContent = currentQuantity
-}
-
-document.getElementById('decrease').onclick = () => {
-  if (currentQuantity > 1) {
-    currentQuantity--
-    quantityDisplay.textContent = currentQuantity
-  }
-}
-
-closeBtn.addEventListener('click', () => modal.classList.add('hidden'))
-
-heartBtn.addEventListener('click', () => {
-  heartBtn.classList.toggle('favorited')
+  // Close modal
+  closeModal.addEventListener('click', () => {
+    modal.classList.add('hidden')
+  })
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.classList.add('hidden')
+    }
+  })
 })
