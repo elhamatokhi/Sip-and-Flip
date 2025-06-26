@@ -14,28 +14,10 @@
     "amount": "1"
   },
   {
-    "id": 1750815977451,
-    "name": "Flat White",
-    "image": "/images/Rectangle (7).png",
-    "amount": "1"
-  },
-  {
     "id": 1750851975350,
     "name": "Mocha",
     "image": "/images/Rectangle(5).png",
     "date": "2025-06-25T11:46:09.490Z",
     "amount": "1"
-  },
-  {
-    "id": 1750851980668,
-    "name": "Iced Latte",
-    "image": "/images/Re.png",
-    "amount": "1"
-  },
-  {
-    "id": 1750851984888,
-    "name": "Espresso",
-    "image": "/images/Rectangle.png",
-    "amount": "3"
   }
 ]
