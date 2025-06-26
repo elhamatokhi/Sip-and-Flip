@@ -1,9 +1,18 @@
 <%- include('partials/header',{title: 'LIBRARY'}) %>
 
 
-<div class="container">
-  <input type="text" placeholder="Search books..." class="search" />
-</div>
+<form method="GET" action="/books" class="search_container">
+  <input
+    type="text"
+    name="query"
+    placeholder="Search by title or author"
+    value="<%= query %>"
+    class="search"
+  />
+  <button type="submit" class="button">
+    Search
+  </button>
+</form>
 
 <div class="category-links">
 
@@ -13,9 +22,10 @@
 <div class="books-container">
   <% books.forEach((book, index) => { %>
     <div class="book-card">
-      <img src="<%= book.image %>" alt="<%= book.name %> cover" class="book-image" />
+      <img src="<%= book.image %>" alt="<%= book.title %> cover" class="book-image" />
       <div class="book-info">
-        <h3><%= book.name %></h3>
+        <h3><%= book.title %></h3>
+        <p><%= book.author %></h4>
         <p><strong>Genre:</strong> <%= book.genre %></p>
         <p><%= book.description %></p>
         <p><strong>Rating:</strong> <%= book.rating %> ⭐</p>

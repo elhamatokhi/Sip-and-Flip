@@ -47,8 +47,8 @@ router.get('/', (req, res) => {
 router.get('/drinksMenu', (req, res) => {
   // Get all the drinks
   let drinks = loadDrinks()
-  //  filter the drinks
 
+  //  filter the drinks
   const selectedCategory = req.query.category || ''
   if (selectedCategory) {
     drinks = drinks.filter(p => p.category === selectedCategory)
@@ -75,7 +75,20 @@ router.get('/random', getRandomDrink)
 // GET books
 router.get('/books', (req, res) => {
   const books = getBooks()
-  res.render('books.ejs', { books })
+
+  const query = req.query.query?.toLowerCase() || ''
+  // Filter books by title or author let filteredBooks = books
+
+  const filteredBooks = books.filter(
+    book =>
+      book.title.toLowerCase().includes(query) ||
+      book.author.toLowerCase().includes(query)
+  )
+
+  res.render('books.ejs', {
+    books: filteredBooks,
+    query: req.query.query || ''
+  })
 })
 // GET Reserved books
 router.get('/reserve', (req, res) => {
