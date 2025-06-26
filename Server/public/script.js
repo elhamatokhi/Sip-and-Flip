@@ -60,4 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
       errorBox.classList.add('fade-out')
     }, 1000) // hides after 2 seconds
   }
+  const successMsg = document.getElementById('reserve-success')
+  if (successMsg) {
+    setTimeout(() => {
+      successMsg.classList.add('fade-out')
+    }, 1000)
+  }
 })

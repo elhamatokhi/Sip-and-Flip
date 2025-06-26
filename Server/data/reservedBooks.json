@@ -1,26 +1,26 @@
 [
   {
-    "id": 1750955757335,
-    "title": "Can’t Hurt Me",
-    "author": "David Goggins",
-    "description": "Navy SEAL David Goggins shares his life story and teaches mental toughness and discipline.",
-    "date": "2025-06-26T16:33:10.647Z",
-    "image": "https://covers.openlibrary.org/b/id/10223628-L.jpg"
-  },
-  {
-    "id": 1750955765742,
+    "id": 1750958196642,
     "title": "Atomic Habits",
     "author": "James Clear",
     "description": "A practical guide to building good habits and breaking bad ones using proven scientific strategies.",
-    "date": "2025-06-26T16:36:02.926Z",
+    "date": "2025-06-26T17:16:31.796Z",
     "image": "https://covers.openlibrary.org/b/id/10523360-L.jpg"
   },
   {
-    "id": 1750956223263,
+    "id": 1750958226057,
     "title": "Deep Work",
     "author": "Cal Newport",
     "description": "Teaches the value of deep, focused work and how it can help you achieve peak performance.",
-    "date": "2025-06-26T16:43:23.535Z",
+    "date": "2025-06-26T17:17:04.391Z",
     "image": "https://covers.openlibrary.org/b/id/8372216-L.jpg"
+  },
+  {
+    "id": 1750958262894,
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "description": "Explores the dual systems of thinking: fast, intuitive decisions and slow, deliberate reasoning.",
+    "date": "2025-06-26T17:17:38.542Z",
+    "image": "https://covers.openlibrary.org/b/id/7278946-L.jpg"
   }
 ]

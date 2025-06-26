@@ -80,7 +80,7 @@ router.get('/books', (req, res) => {
 // GET Reserved books
 router.get('/reserve', (req, res) => {
   const reservedBooks = getReservedBooks()
-  res.render('reservedBooks.ejs', { reservedBooks, error: null })
+  res.render('reservedBooks.ejs', { reservedBooks, error: null, success: true })
 })
 
 // POST Reserved Books
@@ -101,7 +101,8 @@ router.post('/reserve', (req, res) => {
   if (reservedBooks.some(book => book.title === newResevedBook.title)) {
     return res.render('reservedBooks.ejs', {
       reservedBooks,
-      error: 'This book is already reserved!'
+      error: 'This book is already reserved!',
+      success: false
     })
   } else {
     reservedBooks.push(newResevedBook)

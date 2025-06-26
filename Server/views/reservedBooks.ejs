@@ -4,6 +4,8 @@
 
 <% if (error) { %>
 <div class="error-message" id="reserve-error"><%= error %></div>
+<% } %> <% if (success) { %>
+<div id="reserve-success" class="success">Book reserved successfully!</div>
 <% } %>
 
 <div class="books-container">
