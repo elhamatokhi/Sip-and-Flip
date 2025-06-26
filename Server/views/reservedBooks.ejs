@@ -2,6 +2,10 @@
 
 <h2 class="page-title">Your Reserved Books</h2>
 
+<% if (error) { %>
+<div class="error-message" id="reserve-error"><%= error %></div>
+<% } %>
+
 <div class="books-container">
   <% if (reservedBooks.length === 0) { %>
   <p>You have not reserved any books yet.</p>

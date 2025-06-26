@@ -117,11 +117,11 @@ body {
 }
 
 .category-links a:hover {
-  background-color: #d2b48c; /* light brown on hover */
+  background-color: #d2b48c;
 }
 
 .category-links a.active {
-  background-color: #834d1e; /* saddle brown when selected */
+  background-color: #834d1e;
   color: #fff;
 }
 
@@ -172,8 +172,6 @@ body {
   align-items: center;
   padding: 0.5rem;
   gap: 0.5rem;
-}
-.book-card {
 }
 
 .drink-card:hover {
@@ -261,6 +259,31 @@ body {
   width: fit-content;
   margin: 2rem auto;
   padding-bottom: 0.5rem;
+}
+.error-message {
+  background-color: #ffdddd;
+  color: #b80000;
+  border: 1px solid #b80000;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  animation: slideDown 0.4s ease-in-out;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*---------------------END BOOKS-------------------*/

@@ -80,7 +80,7 @@ router.get('/books', (req, res) => {
 // GET Reserved books
 router.get('/reserve', (req, res) => {
   const reservedBooks = getReservedBooks()
-  res.render('reservedBooks.ejs', { reservedBooks })
+  res.render('reservedBooks.ejs', { reservedBooks, error: null })
 })
 
 // POST Reserved Books
@@ -97,7 +97,15 @@ router.post('/reserve', (req, res) => {
     image
   }
   const reservedBooks = getReservedBooks()
-  reservedBooks.push(newResevedBook)
+
+  if (reservedBooks.some(book => book.title === newResevedBook.title)) {
+    return res.render('reservedBooks.ejs', {
+      reservedBooks,
+      error: 'This book is already reserved!'
+    })
+  } else {
+    reservedBooks.push(newResevedBook)
+  }
 
   try {
     fs.writeFileSync(
@@ -109,8 +117,6 @@ router.post('/reserve', (req, res) => {
     console.log('Error reserving the book:', error)
     res.status(500).send('Error saving data.')
   }
-
-  res.render('reservedBooks.ejs', { reservedBooks })
 })
 /* -------------------------- ORDERS ------------------------- */
 

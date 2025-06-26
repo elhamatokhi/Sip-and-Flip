@@ -1,40 +1,5 @@
 [
   {
-    "id": 1750807755147,
-    "name": "Espresso",
-    "image": "/images/Rectangle.png",
-    "date": "2025-06-24T23:29:13.549Z",
-    "amount": "1"
-  },
-  {
-    "id": 1750807757741,
-    "name": "Double Espresso",
-    "image": "/images/Rectangle (3).png",
-    "date": "2025-06-24T23:29:16.613Z",
-    "amount": "1"
-  },
-  {
-    "id": 1750807760895,
-    "name": "Cappuccino",
-    "image": "/images/Rectangle (2).png",
-    "date": "2025-06-24T23:29:19.669Z",
-    "amount": "1"
-  },
-  {
-    "id": 1750807765087,
-    "name": "Cold Brew",
-    "image": "/images/Rectangle (8).png",
-    "date": "2025-06-24T23:29:21.851Z",
-    "amount": "1"
-  },
-  {
-    "id": 1750807769004,
-    "name": "Flat White",
-    "image": "/images/Rectangle (7).png",
-    "date": "2025-06-24T23:29:26.022Z",
-    "amount": "1"
-  },
-  {
     "id": 1750807827368,
     "name": "Iced Latte",
     "image": "/images/Re.png",
@@ -44,7 +9,7 @@
   {
     "id": 1750815951058,
     "name": "Cappuccino",
-    "image": "/images/Rectangle (2).png",
+    "image": "/images/Rectangle(2).png",
     "date": "2025-06-25T01:45:48.630Z",
     "amount": "1"
   },
@@ -57,7 +22,7 @@
   {
     "id": 1750851975350,
     "name": "Mocha",
-    "image": "/images/Rectangle (5).png",
+    "image": "/images/Rectangle(5).png",
     "date": "2025-06-25T11:46:09.490Z",
     "amount": "1"
   },
@@ -72,31 +37,5 @@
     "name": "Espresso",
     "image": "/images/Rectangle.png",
     "amount": "3"
-  },
-  {
-    "id": 1750851984917,
-    "name": "Espresso",
-    "image": "/images/Rectangle.png",
-    "amount": "3"
-  },
-  {
-    "id": 1750933372747,
-    "name": "Chai Latte",
-    "image": "",
-    "date": "2025-06-26T10:22:43.314Z",
-    "amount": "2"
-  },
-  {
-    "id": 1750938327931,
-    "name": "",
-    "image": "https://covers.openlibrary.org/b/id/8372216-L.jpg",
-    "date": "2025-06-26T11:45:23.158Z",
-    "amount": "2"
-  },
-  {
-    "id": 1750938389683,
-    "name": "",
-    "image": "https://covers.openlibrary.org/b/id/8372216-L.jpg",
-    "date": "2025-06-26T11:46:10.918Z"
   }
 ]

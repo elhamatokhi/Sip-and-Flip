@@ -42,12 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   // Close modal
-  closeModal.addEventListener('click', () => {
-    modal.classList.add('hidden')
-  })
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
+  if (closeModal) {
+    closeModal.addEventListener('click', () => {
       modal.classList.add('hidden')
-    }
-  })
+    })
+  }
+  if (modal) {
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.classList.add('hidden')
+      }
+    })
+  }
+  const errorBox = document.getElementById('reserve-error')
+  if (errorBox) {
+    setTimeout(() => {
+      errorBox.classList.add('fade-out')
+    }, 1000) // hides after 2 seconds
+  }
 })
