@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import { readFileSync } from 'fs'
 import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)

@@ -15,7 +15,7 @@ export const loadDrinks = () => {
   return drinks
 }
 
-// Helper to load existing orders
+// Load existing orders
 export const loadOrders = () => {
   const ordersFile = path.join(__dirname, '../data/orders.json')
   if (!fs.existsSync(ordersFile)) {
@@ -27,7 +27,7 @@ export const loadOrders = () => {
     return JSON.parse(data)
   } catch (err) {
     console.error('Error parsing orders.json:', err)
-    return [] // Fail-safe fallback
+    return []
   }
 }
 

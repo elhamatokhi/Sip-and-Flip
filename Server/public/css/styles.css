@@ -153,7 +153,8 @@ body {
   box-shadow: 0 0 0.4rem rgba(24, 17, 2, 0.3);
 }
 
-.drinks-container {
+.drinks-container,
+.books-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -172,12 +173,97 @@ body {
   padding: 0.5rem;
   gap: 0.5rem;
 }
+.book-card {
+}
 
 .drink-card:hover {
   transform: scale(1.03);
 }
 
-/*  -------------------- End of Drinks Menu */
+/*  -------------------- End of Drinks Menu --------------*/
+/*------------------- Books-----------*/
+.book-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.book-card p {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.book-card .genre {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .rating {
+  font-size: 1rem;
+  color: #f4c542;
+  margin-bottom: 1rem;
+}
+
+.book-card .availability {
+  font-size: 0.85rem;
+  color: green;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .order-form {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  font-family: 'Georgia', serif;
+  border-bottom: 0.2rem solid #f39c12;
+  width: fit-content;
+  margin: 2rem auto;
+  padding-bottom: 0.5rem;
+}
+
+/*---------------------END BOOKS-------------------*/
 .wrapper {
   display: flex;
   flex-direction: column;

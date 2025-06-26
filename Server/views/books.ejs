@@ -1,0 +1,45 @@
+<%- include('partials/header',{title: 'LIBRARY'}) %>
+<div class="container">
+  <input type="text" placeholder="Search books..." class="search" />
+</div>
+
+<div class="category-links">
+
+    <a href="/reserve">Reseverd Books</a>
+   
+  </div>
+<div class="books-container">
+  <% books.forEach((book, index) => { %>
+    <div class="book-card">
+      <img src="<%= book.image %>" alt="<%= book.name %> cover" class="book-image" />
+      <div class="book-info">
+        <h3><%= book.name %></h3>
+        <p><strong>Genre:</strong> <%= book.genre %></p>
+        <p><%= book.description %></p>
+        <p><strong>Rating:</strong> <%= book.rating %> ⭐</p>
+        <p><strong>Available:</strong> <%= book.availability ? 'Yes' : 'No' %></p>
+      </div>
+
+      <% if (book.availability) { %>
+        <form action="/reserve" method="POST" class="order-form">
+          <input type="hidden" name="title" value="<%= book.title %>" />
+          <input type="hidden" name="author" value="<%= book.author %>" />
+          <input type="hidden" name="description" value="<%= book.description %>" />
+          <input type="hidden" name="date" value="<%= new Date().toISOString() %>" />
+          <input type="hidden" name="image" value="<%= book.image %>" />
+         
+          <button type="submit" class="order-button">
+            <i class="fa-solid fa-book-bookmark fa-2xl"></i> Reserve
+          </button>
+        </form>
+    
+      <% } else { %>
+        <button class="order-button disabled" disabled>Not Available</button>
+      <% } %>
+    </div>
+  <% }); %>
+</div>
+
+
+  <%- include('partials/footer') %>
+</div>
