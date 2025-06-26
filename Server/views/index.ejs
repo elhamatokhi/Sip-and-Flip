@@ -1,6 +1,6 @@
 <%- include('partials/header',{title: 'HOME'}) %>
 <div class="main-container">
-  <h1>Good Day, <%= username %></h1>
+  <h1><%= greeting %></h1>
 
   <div class="bestSeller">
     <p>Best seller to be added</p>
@@ -13,15 +13,15 @@
     <div class="content-wrapper">
       <div
         class="random-drink"
-        data-name="<%= randomDrink.name %>"
-        data-description="<%= randomDrink.description %>"
-        data-price="<%= randomDrink.price.toFixed(2) %>"
-        data-image="<%= randomDrink.image %>"
+        data-name="<%= drink.name %>"
+        data-description="<%= drink.description %>"
+        data-price="<%= drink.price.toFixed(2) %>"
+        data-image="<%= drink.image %>"
       >
-        <img src="<%= randomDrink.image  %>" alt="" />
-        <p><strong><%= randomDrink.name %></strong></p>
-        <p><%= randomDrink.description %></p>
-        <p><strong>€<%= randomDrink.price %></strong></p>
+        <img src="<%= drink.image  %>" alt="" />
+        <p><strong><%= drink.name %></strong></p>
+        <p><%= drink.description %></p>
+        <p><strong>€<%= drink.price %></strong></p>
       </div>
 
       <div class="random-tagline">

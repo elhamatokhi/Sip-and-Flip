@@ -36,5 +36,5 @@ export const getRandomDrink = (req, res) => {
   const drinks = loadDrinks()
   const randomIndex = Math.floor(Math.random() * drinks.length)
   const randomDrink = drinks[randomIndex]
-  res.json(randomDrink)
+  return randomDrink
 }

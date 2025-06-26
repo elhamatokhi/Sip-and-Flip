@@ -8,36 +8,33 @@ import {
   loadOrders
 } from '../cotrollers/drinksControllers.js'
 
+import { getRandomUser } from '../cotrollers/userControllers.js'
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const router = Router()
 
-const users = JSON.parse(
-  fs.readFileSync(path.join(__dirname, '../data/user.json'), 'utf-8')
+// Load taglines from the JSON file
+const taglines = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '../data/taglines.json'), 'utf8')
 )
 
 // HOME
 router.get('/', (req, res) => {
-  const currentUser = users[1]
+  const user = getRandomUser()
+  const drink = getRandomDrink()
 
-  const drinks = loadDrinks()
-  const randomIndex = Math.floor(Math.random() * drinks.length)
-  const randomDrink = drinks[randomIndex]
-
-  // Load taglines from the JSON file
-  const taglines = JSON.parse(
-    fs.readFileSync(path.join(__dirname, '../data/taglines.json'), 'utf8')
-  )
+  console.log(user, drink)
 
   // Pick a random tagline
   const randomTagline = taglines[Math.floor(Math.random() * taglines.length)]
 
-  console.log(randomTagline)
   res.render('index', {
-    username: currentUser.username,
-    randomDrink,
-    randomTagline
+    drink,
+    user,
+    randomTagline,
+    greeting: `Hi, ${user.username}!`
   })
 })
 
@@ -47,9 +44,10 @@ router.get('/', (req, res) => {
 
 // Get All Drinks with filtering
 router.get('/drinksMenu', (req, res) => {
+  // Get all the drinks
   let drinks = loadDrinks()
   //  filter the drinks
-  console.log(req.query)
+
   const selectedCategory = req.query.category || ''
   if (selectedCategory) {
     drinks = drinks.filter(p => p.category === selectedCategory)
@@ -58,23 +56,19 @@ router.get('/drinksMenu', (req, res) => {
 })
 
 // Add Drink to order
-const orders = []
 router.post('/order', (req, res) => {
   const { name, image, date, amount } = req.body
-
-  const orderID = Date.now()
-
+  const orderID = Date.now() // Generate a new ID for each order
   const newOrder = { id: orderID, name, image, date, amount }
-  console.log('Order received:', { name, date, image, amount })
 
-  const orders = loadOrders() // Load existing
-  orders.push(newOrder)
+  const existingOrders = loadOrders() // Load existing
+  existingOrders.push(newOrder)
   try {
     fs.writeFileSync(
       path.join(__dirname, '../data/orders.json'),
-      JSON.stringify(orders, null, 2)
+      JSON.stringify(existingOrders, null, 2)
     )
-    console.log('order saved: ', newOrder)
+
     res.redirect('/orders')
   } catch (err) {
     console.error('Error saving order:', err)
@@ -85,7 +79,6 @@ router.post('/order', (req, res) => {
 //GET orders
 router.get('/orders', (req, res) => {
   const orders = loadOrders()
-  console.log(orders)
   res.render('order', { orders })
 })
 
@@ -106,6 +99,8 @@ router.get('/favorites', (req, res) => {
   res.render('favorites')
 })
 
+// Add Drinks to Favorties
+
 // Get a random drink
 router.get('/random', getRandomDrink)
 
@@ -116,13 +111,7 @@ router.get('/contact', (req, res) => {
 
 router.post('/contact', (req, res) => {
   const { name, email, message } = req.body
-  console.log('Contact form submitted:', { name, email, message })
-
   res.send(`<h1>Thank you, ${name}! We received your message.</h1>`)
 })
-
-// Add Drinks to Favorties
-// Get Favorites
-// POST favorite drinks
 
 export default router
