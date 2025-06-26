@@ -19,6 +19,10 @@
     <a href="/reserve">Reseverd Books</a>
    
   </div>
+
+<% if (books.length === 0) { %>
+  <p class="no-books-message">No books found matching your search.</p>
+<% } else { %>
 <div class="books-container">
   <% books.forEach((book, index) => { %>
     <div class="book-card">
@@ -51,7 +55,7 @@
     </div>
   <% }); %>
 </div>
-
+<% } %>
 
   <%- include('partials/footer') %>
 </div>

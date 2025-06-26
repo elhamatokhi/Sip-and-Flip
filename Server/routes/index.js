@@ -53,7 +53,22 @@ router.get('/drinksMenu', (req, res) => {
   if (selectedCategory) {
     drinks = drinks.filter(p => p.category === selectedCategory)
   }
-  res.render('drinkMenu', { drinks, selectedCategory })
+  const query = req.query.query?.toLowerCase() || ''
+  // Filter books by title or author let filteredBooks = books
+
+  const filteredDrinks = query
+    ? drinks.filter(
+        drink =>
+          drink.name.toLowerCase().includes(query) ||
+          drink.description.toLowerCase().includes(query)
+      )
+    : drinks
+
+  res.render('drinkMenu', {
+    drinks: filteredDrinks,
+    selectedCategory,
+    query: req.query.query || ''
+  })
 })
 
 // GET Drink Details
@@ -79,11 +94,13 @@ router.get('/books', (req, res) => {
   const query = req.query.query?.toLowerCase() || ''
   // Filter books by title or author let filteredBooks = books
 
-  const filteredBooks = books.filter(
-    book =>
-      book.title.toLowerCase().includes(query) ||
-      book.author.toLowerCase().includes(query)
-  )
+  const filteredBooks = query
+    ? books.filter(
+        book =>
+          book.title.toLowerCase().includes(query) ||
+          book.author.toLowerCase().includes(query)
+      )
+    : books
 
   res.render('books.ejs', {
     books: filteredBooks,

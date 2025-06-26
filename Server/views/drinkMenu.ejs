@@ -1,6 +1,15 @@
 <%- include('partials/header',{title: 'Drinks MENU'}) %>
 <div class="container">
-  <input type="text" placeholder="Search..." class="search" />
+  <form method="GET" action="/drinksMenu" class="search_container">
+    <input
+      type="text"
+      name="query"
+      placeholder="Search by name or description...."
+      value="<%= query %>"
+      class="search"
+    />
+    <button type="submit" class="button">Search</button>
+  </form>
 
   <div class="category-links">
     <a
@@ -20,7 +29,9 @@
       >Soft Drink</a
     >
   </div>
-
+  <% if(drinks.length === 0){ %>
+  <p class="no-drinks-message">Sorry, this drink is not available now!</p>
+  <% }else{ %>
   <div class="drinks-container">
     <% drinks.forEach((p, index) => { %>
     <div class="drink-card">
@@ -56,6 +67,5 @@
     </div>
     <% }); %>
   </div>
-
-  <%- include('partials/footer') %>
+  <% } %> <%- include('partials/footer') %>
 </div>

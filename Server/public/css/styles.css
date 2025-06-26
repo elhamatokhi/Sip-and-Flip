@@ -117,7 +117,6 @@ body {
 /* -------------------- Start of Drinks menu ---------------- */
 
 .container {
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
@@ -706,6 +705,13 @@ h1 {
 }
 
 /* Contact form */
+.contact_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  flex-direction: column;
+}
 .contact-form {
   /* max-width: 40rem; */
   margin: 0 auto;
@@ -752,6 +758,9 @@ h1 {
   cursor: pointer;
 
   transition: background-color 0.3s ease;
+}
+.contact_container h1 {
+  font-size: larger;
 }
 
 .contact-form button:hover {
