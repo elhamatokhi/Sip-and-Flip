@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "Ahmad",
+    "email": "alice@example.com",
+    "password": "hashed"
+  },
+  {
+    "id": 2,
+    "username": "Bob",
+    "email": "bob@example.com",
+    "password": "plaintext"
+  },
+  {
+    "id": 3,
+    "username": "Charlie",
+    "email": "charlie@example.com",
+    "password": "hashed"
+  },
+  {
+    "id": 4,
+    "username": "Diana",
+    "email": "diana@example.com",
+    "password": "plaintext"
+  }
+]

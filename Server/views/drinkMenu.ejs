@@ -1,0 +1,71 @@
+<%- include('partials/header',{title: 'Drinks MENU'}) %>
+<div class="container">
+  <form method="GET" action="/drinksMenu" class="search_container">
+    <input
+      type="text"
+      name="query"
+      placeholder="Search by name or description...."
+      value="<%= query %>"
+      class="search"
+    />
+    <button type="submit" class="button">Search</button>
+  </form>
+
+  <div class="category-links">
+    <a
+      href="/drinksMenu?category=coffee"
+      class="<%= selectedCategory === 'coffee' ? 'active' : '' %>"
+      >Coffee</a
+    >
+
+    <a
+      href="/drinksMenu?category=chocolate"
+      class="<%= selectedCategory === 'chocolate' ? 'active' : '' %>"
+      >Chocolate</a
+    >
+    <a
+      href="/drinksMenu?category=soft drink"
+      class="<%= selectedCategory === 'soft drink' ? 'active' : '' %>"
+      >Soft Drink</a
+    >
+  </div>
+  <% if(drinks.length === 0){ %>
+  <p class="no-drinks-message">Sorry, this drink is not available now!</p>
+  <% }else{ %>
+  <div class="drinks-container">
+    <% drinks.forEach((p, index) => { %>
+    <div class="drink-card">
+      <img src="<%= p.image %>" alt="<%= p.name %> image" class="drink-image" />
+      <div class="drink-info">
+        <h3><%= p.name %></h3>
+        <p><%= p.description %></p>
+
+        <span class="drink-price">€<%= p.price.toFixed(2) %></span>
+      </div>
+
+      <form action="/order" method="POST" class="order-form">
+        <input type="hidden" name="image" value="<%= p.image  %>" />
+        <input
+          type="number"
+          name="amount"
+          value="1"
+          min="1"
+          required
+          class="amount-input"
+        />
+        <input type="hidden" name="name" value="<%= p.name  %>" />
+        <input type="hidden" name="" id="" />
+        <input
+          type="hidden"
+          name="date"
+          value="<%= new Date().toISOString() %>"
+        />
+        <button type="submit" class="order-button">
+          <i class="fa-solid fa-square-plus fa-2xl order-button"></i>
+        </button>
+      </form>
+    </div>
+    <% }); %>
+  </div>
+  <% } %> <%- include('partials/footer') %>
+</div>

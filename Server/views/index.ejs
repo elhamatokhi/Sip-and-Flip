@@ -1,0 +1,66 @@
+<%- include('partials/header',{title: 'HOME'}) %>
+<div class="main-container">
+  <h1><%= greeting %></h1>
+
+  <div class="bestSeller">
+    <p>Best seller to be added</p>
+    <a href="#">More info</a>
+  </div>
+
+  <div class="week">
+    <h2>This week's recommendations <a href="#" class="see-all">See all</a></h2>
+
+    <div class="content-wrapper">
+      <div
+        class="random-drink"
+        data-name="<%= drink.name %>"
+        data-description="<%= drink.description %>"
+        data-price="<%= drink.price.toFixed(2) %>"
+        data-image="<%= drink.image %>"
+      >
+        <img src="<%= drink.image  %>" alt="" />
+        <p><strong><%= drink.name %></strong></p>
+        <p><%= drink.description %></p>
+        <p><strong>€<%= drink.price %></strong></p>
+      </div>
+
+      <div class="random-tagline">
+        <em><%= randomTagline %></em>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Modal (only ONE drink-card inside) -->
+  <div id="drinkModal" class="modal hidden">
+    <div class="drink-pop">
+      <span id="closeModal" class="close">&times;</span>
+      <!-- <img src="" alt="Drink Image" class="drink-popup-image" id="modalImage" /> -->
+      <div class="drink-info">
+        <h3 id="modalName"></h3>
+        <p id="modalDescription"></p>
+        <span class="drink-price" id="modalPrice"></span>
+      </div>
+
+      <form action="/order" method="POST" class="order-form">
+        <input type="hidden" name="image" id="modalImageInput" />
+        <input
+          type="number"
+          name="amount"
+          value="1"
+          min="1"
+          required
+          class="amount-input"
+          id="modalAmountInput"
+        />
+        <input type="hidden" name="name" id="modalNameInput" />
+        <input
+          type="hidden"
+          name="date"
+          value="<%= new Date().toISOString() %>"
+        />
+        <button type="submit" class="order-button">Order now</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>

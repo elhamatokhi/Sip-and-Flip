@@ -1,0 +1,35 @@
+<%- include('partials/header',{title: 'Drinks Details'}) %>
+<div class="drink-detail">
+  <img
+    src="<%= order.image %>"
+    alt="<%= order.name %> image"
+    class="drink-image"
+  />
+  <div class="drink-info">
+    <h3><%= order.name %></h3>
+    <p><%= order.description %></p>
+  </div>
+
+  <form action="/order" method="POST" class="order-form">
+    <input type="hidden" name="image" value="<%= order.image  %>" />
+    <input
+      type="number"
+      name="amount"
+      value="1"
+      min="1"
+      required
+      class="amount-input"
+    />
+    <input type="hidden" name="name" value="<%= order.name  %>" />
+    <input type="hidden" name="" id="" />
+
+    <button type="submit" class="order-button">
+      <i class="fa-solid fa-square-plus fa-2xl order-button"></i>
+    </button>
+  </form>
+
+  <div class="drink-origin">
+    <p></p>
+  </div>
+</div>
+<%- include('partials/footer') %>

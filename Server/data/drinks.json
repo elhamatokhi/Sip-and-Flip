@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Espresso",
+    "description": "Strong and bold single shot of coffee.",
+    "price": 2,
+    "category": "coffee",
+    "image": "/images/Rectangle.png"
+  },
+  {
+    "name": "Double Espresso",
+    "description": "Twice the kick of a regular espresso.",
+    "price": 3,
+    "category": "coffee",
+    "image": "/images/Rectangle(1).png"
+  },
+  {
+    "name": "Cappuccino",
+    "description": "Espresso with steamed milk and foam.",
+    "price": 3.5,
+    "category": "coffee",
+    "image": "/images/Rectangle(2).png"
+  },
+  {
+    "name": "Latte",
+    "description": "Espresso with lots of steamed milk.",
+    "price": 3.8,
+    "category": "coffee",
+    "image": "/images/Rectangle(4).png"
+  },
+  {
+    "name": "Mocha",
+    "description": "Espresso with chocolate and steamed milk.",
+    "price": 4,
+    "category": "chocolate",
+    "image": "/images/Rectangle(5).png"
+  },
+  {
+    "name": "Macchiato",
+    "description": "Espresso marked with a small amount of foam.",
+    "price": 2.8,
+    "category": "coffee",
+    "image": "/images/Rectangle (6).png"
+  },
+  {
+    "name": "Flat White",
+    "description": "Smooth blend of espresso and milk.",
+    "price": 3.7,
+    "category": "coffee",
+    "image": "/images/Rectangle (7).png"
+  },
+  {
+    "name": "Iced Coffee",
+    "description": "Cold brewed coffee over ice.",
+    "price": 3,
+    "category": "coffee",
+    "image": "/images/Rectangle(2).png"
+  },
+  {
+    "name": "Cold Brew",
+    "description": "Slow-steeped cold brew coffee.",
+    "price": 3.8,
+    "category": "coffee",
+    "image": "/images/Rectangle (8).png"
+  },
+  {
+    "name": "Iced Latte",
+    "description": "Chilled espresso and milk over ice.",
+    "price": 4,
+    "category": "coffee",
+    "image": "/images/Re.png"
+  },
+  {
+    "name": "Frappuccino",
+    "description": "Blended iced coffee drink.",
+    "price": 4.5,
+    "category": "coffee",
+    "image": "/images/Rectangle(2).png"
+  },
+  {
+    "name": "Milkshake Chocolate",
+    "description": "Creamy chocolate milkshake.",
+    "price": 4.2,
+    "category": "chocolate",
+    "image": "/images/Rectangle(2).png"
+  },
+  {
+    "name": "Coconut Water",
+    "description": "Naturally hydrating tropical drink.",
+    "price": 3.5,
+    "category": "soft drink",
+    "image": "/images/Rectangle (6).png"
+  },
+  {
+    "name": "Ginger Tea",
+    "description": "Spicy and soothing ginger tea.",
+    "price": 2.8,
+    "category": "soft drink",
+    "image": "/images/Rectangle (6).png"
+  }
+]

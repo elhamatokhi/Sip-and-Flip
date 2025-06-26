@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1750807827368,
+    "name": "Iced Latte",
+    "image": "/images/Re.png",
+    "date": "2025-06-24T23:30:17.920Z",
+    "amount": "3"
+  },
+  {
+    "id": 1750815951058,
+    "name": "Cappuccino",
+    "image": "/images/Rectangle(2).png",
+    "date": "2025-06-25T01:45:48.630Z",
+    "amount": "1"
+  },
+  {
+    "id": 1750851975350,
+    "name": "Mocha",
+    "image": "/images/Rectangle(5).png",
+    "date": "2025-06-25T11:46:09.490Z",
+    "amount": "1"
+  }
+]
