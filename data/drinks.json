@@ -14,13 +14,6 @@
     "image": "/images/Rectangle(1).png"
   },
   {
-    "name": "Cappuccino",
-    "description": "Espresso with steamed milk and foam.",
-    "price": 3.5,
-    "category": "coffee",
-    "image": "/images/Rectangle(2).png"
-  },
-  {
     "name": "Latte",
     "description": "Espresso with lots of steamed milk.",
     "price": 3.8,
