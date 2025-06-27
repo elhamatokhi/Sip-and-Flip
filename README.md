@@ -4,6 +4,8 @@ Sip & Flip is a tailored web app designed exclusively for a specific café, offe
 
 ![screenshot](./Server/public/Images/screenshot.png)
 
+![Live view](https://sipandflip.onrender.com)
+
 ## 💡Key Features
 
 - 🍽 Browse and order drinks from a dynamic menu with their details
