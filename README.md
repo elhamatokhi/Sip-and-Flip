@@ -2,7 +2,7 @@
 
 Sip & Flip is a tailored web app designed exclusively for a specific café, offering a seamless ordering experience for customers. Whether you're immersed in a book or simply relaxing, you can order food and drinks straight from your phone without leaving your seat. The platform enhances in-café comfort by allowing users to place orders with just a few taps, ensuring a personalized and uninterrupted experience.
 
-![screenshot](./Server/public/Images/screenshot.png)
+![screenshot](./public/images/screenshot.png)
 
 [🚀 Live Demo on Render](https://sipandflip.onrender.com)
 
