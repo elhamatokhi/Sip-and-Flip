@@ -774,6 +774,19 @@ h1 {
   align-items: center;
   justify-content: space-around;
 }
+
+/* -------------------ABOUT---------------*/
+.center-text {
+  text-align: center;
+  max-width: 45rem;
+  margin-inline: auto;
+  line-height: 1.5;
+  padding-block: 1.5rem;
+  font-size: 1.3rem;
+}
+.about-container h1 {
+  font-size: 2rem;
+}
 /* For smaller screens */
 @media (max-width: 768px) {
   .navbar > .hamburger {

@@ -190,6 +190,10 @@ router.post('/contact', (req, res) => {
   res.send(`<h1>Thank you, ${name}! We received your message.</h1>`)
 })
 
+/*--------------------ABOUT----------------- */
+router.get('/about', (req, res) => {
+  res.render('about.ejs')
+})
 // Get Favorites
 router.get('/favorites', (req, res) => {
   res.render('favorites')
