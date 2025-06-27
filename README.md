@@ -4,7 +4,7 @@ Sip & Flip is a tailored web app designed exclusively for a specific café, offe
 
 ![screenshot](./Server/public/Images/screenshot.png)
 
-![Live view](https://sipandflip.onrender.com)
+[🚀 Live Demo on Render](https://sipandflip.onrender.com)
 
 ## 💡Key Features
 
