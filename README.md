@@ -22,8 +22,6 @@ Sip & Flip is a tailored web app designed exclusively for a specific café, offe
 
 - 📱 Smooth experience across desktop and mobile devices.
 
-- 🛠 Focused on usability, with a pleasant aesthetic.
-
 # ⚙️ Implementation Outline
 
 ## Built with
