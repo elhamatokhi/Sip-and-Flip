@@ -4,90 +4,90 @@
     "description": "Strong and bold single shot of coffee.",
     "price": 2,
     "category": "coffee",
-    "image": "/images/Rectangle.png"
+    "image": "/images/espresso.jpg"
   },
   {
-    "name": "Double Espresso",
+    "name": "Iced Coffee Sweet Heaven",
     "description": "Twice the kick of a regular espresso.",
     "price": 3,
     "category": "coffee",
-    "image": "/images/Rectangle(1).png"
+    "image": "/images/Iced_Coffee_Sweet_Heaven.png"
   },
   {
-    "name": "Latte",
-    "description": "Espresso with lots of steamed milk.",
+    "name": "Iced Chocolate",
+    "description": "Sweetened dark chocolate, served cold with whipped cream and stick wafer",
     "price": 3.8,
     "category": "coffee",
-    "image": "/images/Rectangle(4).png"
+    "image": "/images/Iced_Chocolate.png"
   },
   {
-    "name": "Mocha",
-    "description": "Espresso with chocolate and steamed milk.",
+    "name": "Iced Yin & Yang",
+    "description": "Dark chocolate and evaporated milk, served cold",
     "price": 4,
     "category": "chocolate",
-    "image": "/images/Rectangle(5).png"
+    "image": "/images/Iced_Yin &_Yang.png"
   },
   {
-    "name": "Macchiato",
-    "description": "Espresso marked with a small amount of foam.",
+    "name": "Iced Lemonade",
+    "description": "Fresh lemon juice and soda water, served cold",
     "price": 2.8,
     "category": "coffee",
-    "image": "/images/Rectangle (6).png"
+    "image": "/images/Iced_Lemonade.png"
   },
   {
-    "name": "Flat White",
-    "description": "Smooth blend of espresso and milk.",
+    "name": "Iced Strawberry Lemonade",
+    "description": "Iced lemonade with fresh strawberry juice, served cold.",
     "price": 3.7,
-    "category": "coffee",
-    "image": "/images/Rectangle (7).png"
+    "category": "soft drink",
+    "image": "/images/strawberry.png"
   },
   {
     "name": "Iced Coffee",
     "description": "Cold brewed coffee over ice.",
     "price": 3,
     "category": "coffee",
-    "image": "/images/Rectangle(2).png"
+    "image": "/images/Iced_Americano.png"
   },
   {
     "name": "Cold Brew",
     "description": "Slow-steeped cold brew coffee.",
     "price": 3.8,
-    "category": "coffee",
-    "image": "/images/Rectangle (8).png"
+    "category": "soft drink",
+    "image": "/images/Iced_Orange_Lemonade.png"
   },
   {
     "name": "Iced Latte",
     "description": "Chilled espresso and milk over ice.",
     "price": 4,
     "category": "coffee",
-    "image": "/images/Re.png"
+    "image": "/images/hot_cappucino.png"
   },
   {
     "name": "Frappuccino",
     "description": "Blended iced coffee drink.",
     "price": 4.5,
     "category": "coffee",
-    "image": "/images/Rectangle(2).png"
+    "image": "/images/Iced_cuppacino.png"
   },
   {
     "name": "Milkshake Chocolate",
     "description": "Creamy chocolate milkshake.",
     "price": 4.2,
     "category": "chocolate",
-    "image": "/images/Rectangle(2).png"
+    "image": "/images/Hot_Chocolate.png"
   },
   {
     "name": "Coconut Water",
     "description": "Naturally hydrating tropical drink.",
     "price": 3.5,
     "category": "soft drink",
-    "image": "/images/Rectangle (6).png"
+    "image": "/images/coconut-water.png"
   },
   {
     "name": "Ginger Tea",
     "description": "Spicy and soothing ginger tea.",
     "price": 2.8,
     "category": "soft drink",
-    "image": "/images/Rectangle (6).png"
+    "image": "/images/Ginger-Lemon-Tea.jpg"
   }
 ]
