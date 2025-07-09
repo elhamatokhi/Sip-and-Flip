@@ -12,13 +12,10 @@
         <p>Amount: <%= order.amount %></p>
         <h4><%= order.name %></h4>
         <a
-          href="/orders/<%= order.id %>"
+          href="/orders/<%= order.name %>"
           class="view-details"
           data-id="<%= order.id %>"
           data-name="<%= order.name %>"
-          data-image="<%= order.image %>"
-          data-description="<%= order.description %>"
-          data-price="<%= order.price %>"
         >
           View Details
         </a>

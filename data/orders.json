@@ -5,5 +5,26 @@
     "image": "/images/espresso.jpg",
     "date": "2025-07-09T09:01:04.743Z",
     "amount": "1"
+  },
+  {
+    "id": 1752055678563,
+    "name": "Iced Latte",
+    "image": "/images/hot_cappucino.png",
+    "date": "2025-07-09T10:07:55.982Z",
+    "amount": "1"
+  },
+  {
+    "id": 1752055688002,
+    "name": "Frappuccino",
+    "image": "/images/Iced_cuppacino.png",
+    "date": "2025-07-09T10:08:05.376Z",
+    "amount": "1"
+  },
+  {
+    "id": 1752055707899,
+    "name": "Coconut Water",
+    "image": "/images/coconut-water.png",
+    "date": "2025-07-09T10:08:25.656Z",
+    "amount": "1"
   }
 ]

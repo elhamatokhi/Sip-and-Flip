@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url'
 import {
   getRandomDrink,
   loadDrinks,
-  loadOrders
+  loadOrders,
+  getWikipediaData
 } from '../cotrollers/drinksControllers.js'
 
 import { getRandomUser } from '../cotrollers/userControllers.js'
@@ -69,14 +70,33 @@ router.get('/drinksMenu', (req, res) => {
 })
 
 // GET Drink Details
-router.get('/orders/:id', (req, res) => {
+// router.get('/orders/:id', (req, res) => {
+//   const orders = loadOrders()
+//   const ID = Number(req.params.id)
+//   const order = orders.find(o => o.id === ID)
+
+//   if (!order) {
+//     return res.status(404).send('Order not found')
+//   }
+
+//   res.render('drinkDetails', { order })
+// })
+
+router.get('/orders/:name', async (req, res) => {
   const orders = loadOrders()
-  const ID = Number(req.params.id)
-  const order = orders.find(o => o.id === ID)
-  if (!order) {
-    return res.status(404).send('Order not found')
-  }
-  res.render('drinkDetails', { order })
+  const drinkName = req.params.name
+
+  const drink = orders.find(o => o.name === drinkName)
+  if (!drink) return res.status(404).send('Drink not found.')
+
+  const formattedName =
+    drinkName.charAt(0).toUpperCase() + drinkName.slice(1).toLowerCase()
+  const wiki = await getWikipediaData(formattedName)
+
+  res.render('drinkDetails.ejs', {
+    drink,
+    wiki
+  })
 })
 
 // Get a random drink

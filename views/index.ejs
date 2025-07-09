@@ -2,31 +2,24 @@
 <div class="main-container">
   <h1><%= greeting %></h1>
 
-  <div class="bestSeller">
-    <p>Best seller to be added</p>
-    <a href="#">More info</a>
-  </div>
+  <h2>This week's recommendations</h2>
 
-  <div class="week">
-    <h2>This week's recommendations <a href="#" class="see-all">See all</a></h2>
+  <div class="content-wrapper">
+    <div
+      class="random-drink"
+      data-name="<%= drink.name %>"
+      data-description="<%= drink.description %>"
+      data-price="<%= drink.price.toFixed(2) %>"
+      data-image="<%= drink.image %>"
+    >
+      <img src="<%= drink.image  %>" alt="" />
+      <p><strong><%= drink.name %></strong></p>
+      <p><%= drink.description %></p>
+      <p><strong>€<%= drink.price %></strong></p>
+    </div>
 
-    <div class="content-wrapper">
-      <div
-        class="random-drink"
-        data-name="<%= drink.name %>"
-        data-description="<%= drink.description %>"
-        data-price="<%= drink.price.toFixed(2) %>"
-        data-image="<%= drink.image %>"
-      >
-        <img src="<%= drink.image  %>" alt="" />
-        <p><strong><%= drink.name %></strong></p>
-        <p><%= drink.description %></p>
-        <p><strong>€<%= drink.price %></strong></p>
-      </div>
-
-      <div class="random-tagline">
-        <em><%= randomTagline %></em>
-      </div>
+    <div class="random-tagline">
+      <em><%= randomTagline %></em>
     </div>
   </div>
 
