@@ -36,9 +36,6 @@ router.get('/', (req, res) => {
     greeting: `Hi, ${user.username}!`
   })
 })
-
-// Get best seller of the week
-
 // End of HOME
 
 /*------------------DRINKS-------------------- */
@@ -107,10 +104,11 @@ router.get('/books', (req, res) => {
     query: req.query.query || ''
   })
 })
+
 // GET Reserved books
 router.get('/reserve', (req, res) => {
   const reservedBooks = getReservedBooks()
-  res.render('reservedBooks.ejs', { reservedBooks, error: null, success: true })
+  res.render('reservedBooks.ejs', { reservedBooks, error: null, success: null })
 })
 
 // POST Reserved Books
@@ -128,7 +126,11 @@ router.post('/reserve', (req, res) => {
   }
   const reservedBooks = getReservedBooks()
 
-  if (reservedBooks.some(book => book.title === newResevedBook.title)) {
+  if (
+    reservedBooks.some(
+      book => book.title.toLowerCase() === newResevedBook.title.toLowerCase()
+    )
+  ) {
     return res.render('reservedBooks.ejs', {
       reservedBooks,
       error: 'This book is already reserved!',
@@ -136,17 +138,21 @@ router.post('/reserve', (req, res) => {
     })
   } else {
     reservedBooks.push(newResevedBook)
-  }
 
-  try {
-    fs.writeFileSync(
-      path.join(__dirname, '../data/reservedBooks.json'),
-      JSON.stringify(reservedBooks, null, 2)
-    )
-    res.redirect('/reserve')
-  } catch (error) {
-    console.log('Error reserving the book:', error)
-    res.status(500).send('Error saving data.')
+    try {
+      fs.writeFileSync(
+        path.join(__dirname, '../data/reservedBooks.json'),
+        JSON.stringify(reservedBooks, null, 2)
+      )
+      return res.render('reservedBooks.ejs', {
+        reservedBooks,
+        error: false,
+        success: 'Book reserved successfully!'
+      })
+    } catch (error) {
+      console.error('Error reserving the book:', error)
+      return res.status(500).send('Error saving data.')
+    }
   }
 })
 /* -------------------------- ORDERS ------------------------- */
@@ -193,11 +199,6 @@ router.post('/contact', (req, res) => {
 /*--------------------ABOUT----------------- */
 router.get('/about', (req, res) => {
   res.render('about.ejs')
-})
-
-// Get Favorites
-router.get('/favorites', (req, res) => {
-  res.render('favorites')
 })
 
 // Add Drinks to Favorties

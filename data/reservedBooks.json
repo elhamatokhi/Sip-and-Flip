@@ -1,26 +1,42 @@
 [
   {
-    "id": 1750958196642,
-    "title": "Atomic Habits",
-    "author": "James Clear",
-    "description": "A practical guide to building good habits and breaking bad ones using proven scientific strategies.",
-    "date": "2025-06-26T17:16:31.796Z",
-    "image": "https://covers.openlibrary.org/b/id/10523360-L.jpg"
-  },
-  {
-    "id": 1750958226057,
+    "id": 1752052741227,
     "title": "Deep Work",
     "author": "Cal Newport",
     "description": "Teaches the value of deep, focused work and how it can help you achieve peak performance.",
-    "date": "2025-06-26T17:17:04.391Z",
+    "date": "2025-07-09T09:18:59.299Z",
     "image": "https://covers.openlibrary.org/b/id/8372216-L.jpg"
   },
   {
-    "id": 1750958262894,
-    "title": "Thinking, Fast and Slow",
-    "author": "Daniel Kahneman",
-    "description": "Explores the dual systems of thinking: fast, intuitive decisions and slow, deliberate reasoning.",
-    "date": "2025-06-26T17:17:38.542Z",
-    "image": "https://covers.openlibrary.org/b/id/7278946-L.jpg"
+    "id": 1752052767021,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "description": "A practical guide to building good habits and breaking bad ones using proven scientific strategies.",
+    "date": "2025-07-09T09:19:23.785Z",
+    "image": "https://covers.openlibrary.org/b/id/10523360-L.jpg"
+  },
+  {
+    "id": 1752053423296,
+    "title": "The Power of Now",
+    "author": "Eckhart Tolle",
+    "description": "A spiritual guide to help you discover your true self by living fully in the present moment.",
+    "date": "2025-07-09T09:30:17.813Z",
+    "image": "https://covers.openlibrary.org/b/id/8228691-L.jpg"
+  },
+  {
+    "id": 1752053587119,
+    "title": "Start With Why",
+    "author": "Simon Sinek",
+    "description": "A powerful book about how great leaders inspire action by starting with why they do what they do.",
+    "date": "2025-07-09T09:33:03.136Z",
+    "image": "https://covers.openlibrary.org/b/id/8155414-L.jpg"
+  },
+  {
+    "id": 1752053605870,
+    "title": "Can’t Hurt Me",
+    "author": "David Goggins",
+    "description": "Navy SEAL David Goggins shares his life story and teaches mental toughness and discipline.",
+    "date": "2025-07-09T09:33:22.481Z",
+    "image": "https://covers.openlibrary.org/b/id/10223628-L.jpg"
   }
 ]
