@@ -12,8 +12,7 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.order-container,
-.cart-container {
+.order-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -201,7 +200,7 @@ button.checkout-btn:hover {
 
 .place-order-form {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 .place-order-btn {
@@ -281,7 +280,7 @@ button.checkout-btn:hover {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin: 2rem auto;
+  margin: 0rem auto;
 }
 .search_container {
   display: flex;
@@ -313,8 +312,8 @@ button.checkout-btn:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 5rem;
-  justify-content: center;
+  padding: 2rem;
+  justify-content: space-between;
   padding-bottom: 5rem;
 }
 
@@ -339,7 +338,7 @@ button.checkout-btn:hover {
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 18rem;
+  width: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -412,7 +411,7 @@ button.checkout-btn:hover {
   font-family: 'Georgia', serif;
   border-bottom: 0.2rem solid #f39c12;
   width: fit-content;
-  margin: 2rem auto;
+  margin: 0rem auto;
   padding-bottom: 0.5rem;
 }
 .error-message {
@@ -429,6 +428,14 @@ button.checkout-btn:hover {
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
+}
+
+.reservedBooks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  padding-bottom: 5rem;
 }
 @keyframes slideDown {
   from {

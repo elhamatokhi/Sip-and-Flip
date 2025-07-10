@@ -1,10 +1,34 @@
 [
   {
-    "id": 1752171857884,
+    "id": 1752174548111,
+    "title": "And the Mountains Echoed",
+    "author": "Khaled Hosseini",
+    "description": "A multi-generational story exploring the bonds between siblings and the sacrifices families make.",
+    "date": "2025-07-10T19:09:05.589Z",
+    "image": "/images/and-the-mountains-echoed-taschenbuch-khaled-hosseini-englisch.webp"
+  },
+  {
+    "id": 1752174779793,
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "description": "Teaches the value of deep, focused work and how it can help you achieve peak performance.",
+    "date": "2025-07-10T19:12:58.129Z",
+    "image": "https://covers.openlibrary.org/b/isbn/1455586692-L.jpg"
+  },
+  {
+    "id": 1752174785020,
     "title": "Atomic Habits",
     "author": "James Clear",
     "description": "A practical guide to building good habits and breaking bad ones using proven scientific strategies.",
-    "date": "2025-07-10T18:24:14.657Z",
+    "date": "2025-07-10T19:13:02.049Z",
     "image": "https://covers.openlibrary.org/b/isbn/0735211299-L.jpg"
+  },
+  {
+    "id": 1752175105850,
+    "title": "A Thousand Splendid Suns",
+    "author": "Khaled Hosseini",
+    "description": "A heartbreaking tale of two women’s friendship and survival amidst decades of war in Afghanistan.",
+    "date": "2025-07-10T19:18:21.095Z",
+    "image": "/images/a-thousand-splendid-suns-taschenbuch-khaled-hosseini-englisch.webp"
   }
 ]
