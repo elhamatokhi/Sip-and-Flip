@@ -1,0 +1,41 @@
+<%- include('partials/header', { title: 'Your Cart' }) %>
+
+<div class="container cart-container">
+  <h2>Your Cart</h2>
+
+  <% if (cartItems.length === 0) { %>
+  <p class="empty-cart-message">Your cart is empty.</p>
+  <% } else { %>
+  <div class="cart-items-grid">
+    <% cartItems.forEach(item => { %>
+    <div class="cart-item-card">
+      <img
+        src="<%= item.image %>"
+        alt="<%= item.name %>"
+        class="cart-item-image"
+      />
+      <div class="cart-item-info">
+        <h3><%= item.name %></h3>
+        <p class="cart-item-date">
+          <%= new Date(item.date).toLocaleString() %>
+        </p>
+        <p class="cart-item-amount">Amount: <%= item.amount %></p>
+
+        <form action="/removeFromCart" method="POST" class="cart-item-form">
+          <input type="hidden" name="id" value="<%= item.id %>" />
+          <button type="submit" class="remove-button">Remove</button>
+        </form>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+
+  <form action="/order" method="POST" class="place-order-form">
+    <button type="submit" class="btn btn-primary place-order-btn">
+      Place Order
+    </button>
+  </form>
+  <% } %>
+</div>
+
+<%- include('partials/footer') %>

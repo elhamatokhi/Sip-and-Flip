@@ -1,30 +1,48 @@
 [
   {
-    "id": 1752051666909,
-    "name": "Espresso",
-    "image": "/images/espresso.jpg",
-    "date": "2025-07-09T09:01:04.743Z",
-    "amount": "1"
+    "id": 1752162718340,
+    "data": "2025-07-10T15:51:58.340Z",
+    "items": [
+      {
+        "id": 1752162710842,
+        "name": "Iced Coffee Sweet Heaven",
+        "image": "/images/Iced_Coffee_Sweet_Heaven.png",
+        "date": "2025-07-10T15:51:49.805Z",
+        "amount": 1
+      },
+      {
+        "id": 1752162716764,
+        "name": "Espresso",
+        "image": "/images/espresso.jpg",
+        "date": "2025-07-10T15:51:53.488Z",
+        "amount": 3
+      }
+    ]
   },
   {
-    "id": 1752055678563,
-    "name": "Iced Latte",
-    "image": "/images/hot_cappucino.png",
-    "date": "2025-07-09T10:07:55.982Z",
-    "amount": "1"
+    "id": 1752163369691,
+    "data": "2025-07-10T16:02:49.691Z",
+    "items": [
+      {
+        "id": 1752163366498,
+        "name": "Espresso",
+        "image": "/images/espresso.jpg",
+        "date": "2025-07-10T16:02:43.578Z",
+        "amount": 3
+      }
+    ]
   },
   {
-    "id": 1752055688002,
-    "name": "Frappuccino",
-    "image": "/images/Iced_cuppacino.png",
-    "date": "2025-07-09T10:08:05.376Z",
-    "amount": "1"
-  },
-  {
-    "id": 1752055707899,
-    "name": "Coconut Water",
-    "image": "/images/coconut-water.png",
-    "date": "2025-07-09T10:08:25.656Z",
-    "amount": "1"
+    "id": 1752163398070,
+    "data": "2025-07-10T16:03:18.070Z",
+    "items": [
+      {
+        "id": 1752163396472,
+        "name": "Iced Coffee Sweet Heaven",
+        "image": "/images/Iced_Coffee_Sweet_Heaven.png",
+        "date": "2025-07-10T16:03:14.931Z",
+        "amount": 1
+      }
+    ]
   }
 ]

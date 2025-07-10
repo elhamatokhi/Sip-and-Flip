@@ -1,7 +1,8 @@
-import { Router } from 'express'
+import e, { Router } from 'express'
 import fs, { read } from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import session from 'express-session'
 import {
   getRandomDrink,
   loadDrinks,
@@ -52,7 +53,7 @@ router.get('/drinksMenu', (req, res) => {
     drinks = drinks.filter(p => p.category === selectedCategory)
   }
   const query = req.query.query?.toLowerCase() || ''
-  // Filter books by title or author let filteredBooks = books
+  // Filter books by title or author
 
   const filteredDrinks = query
     ? drinks.filter(
@@ -166,20 +167,56 @@ router.post('/reserve', (req, res) => {
 })
 /* -------------------------- ORDERS ------------------------- */
 
+// GET CART
+router.get('/cart', (req, res) => {
+  const cartItems = req.session.currentorder || []
+  res.render('cart.ejs', { cartItems })
+})
+
+// POST Cart
+router.post('/addToCart', (req, res) => {
+  const { name, image, date, amount } = req.body
+  const amountNumber = parseInt(amount, 10) || 1
+  const cartItem = { id: Date.now(), name, image, date, amount: amountNumber }
+
+  if (!req.session.currentorder) {
+    req.session.currentorder = []
+  }
+
+  const existing = req.session.currentorder.find(d => d.name === name)
+
+  if (existing) {
+    existing.amount += amountNumber
+  } else {
+    req.session.currentorder.push(cartItem)
+  }
+
+  res.redirect('/cart')
+})
+
 // POST ORDER
 router.post('/order', (req, res) => {
-  const { name, image, date, amount } = req.body
-  const orderID = Date.now() // Generate a new ID for each order
-  const newOrder = { id: orderID, name, image, date, amount }
+  const cartItems = req.session.currentorder || []
+  const order = {
+    id: Date.now(),
+    data: new Date().toISOString(),
+    items: cartItems
+  }
+
+  if (cartItems.length === 0) {
+    return res.status(400).send('Cart is empty.')
+  }
 
   const existingOrders = loadOrders() // Load existing
-  existingOrders.push(newOrder)
+  existingOrders.push(order)
+
   try {
     fs.writeFileSync(
       path.join(__dirname, '../data/orders.json'),
       JSON.stringify(existingOrders, null, 2)
     )
 
+    req.session.currentorder = [] // Clear cart
     res.redirect('/orders')
   } catch (err) {
     console.error('Error saving order:', err)
@@ -193,6 +230,17 @@ router.get('/orders', (req, res) => {
   res.render('order', { orders })
 })
 
+// REMOVE FROM CART
+router.post('/removeFromCart', (req, res) => {
+  const { id } = req.body
+  if (req.session.currentorder) {
+    req.session.currentorder = req.session.currentorder.filter(
+      item => item.id !== parseInt(id)
+    )
+  }
+
+  res.redirect('/cart')
+})
 /*--------------------CONTACT----------------- */
 
 // Contact page

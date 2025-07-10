@@ -43,7 +43,7 @@
         <span class="drink-price">€<%= p.price.toFixed(2) %></span>
       </div>
 
-      <form action="/order" method="POST" class="order-form">
+      <form action="/addToCart" method="POST" class="order-form">
         <input type="hidden" name="image" value="<%= p.image  %>" />
         <input
           type="number"
@@ -61,7 +61,7 @@
           value="<%= new Date().toISOString() %>"
         />
         <button type="submit" class="order-button">
-          <i class="fa-solid fa-square-plus fa-2xl order-button"></i>
+          Add to <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </form>
     </div>
