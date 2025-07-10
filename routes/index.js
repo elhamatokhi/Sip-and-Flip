@@ -97,7 +97,7 @@ router.get('/random', getRandomDrink)
 // GET books
 router.get('/books', (req, res) => {
   const books = getBooks()
-
+  const reservedBooks = getReservedBooks()
   const query = req.query.query?.toLowerCase() || ''
   // Filter books by title or author let filteredBooks = books
 
@@ -111,7 +111,8 @@ router.get('/books', (req, res) => {
 
   res.render('books.ejs', {
     books: filteredBooks,
-    query: req.query.query || ''
+    query: req.query.query || '',
+    reservedBooks
   })
 })
 
@@ -165,6 +166,26 @@ router.post('/reserve', (req, res) => {
     }
   }
 })
+
+// DELETE reserved book
+router.post('/removeservedBook', (req, res) => {
+  const { id } = req.body
+  const reservedBooks = getReservedBooks()
+
+  const filteredBooks = reservedBooks.filter(book => book.id !== Number(id))
+
+  try {
+    fs.writeFileSync(
+      path.join(__dirname, '../data/reservedBooks.json'),
+      JSON.stringify(filteredBooks, null, 2)
+    )
+    res.redirect('/reserve')
+  } catch (err) {
+    console.error('Error removing book:', err)
+    res.status(500).send('Error removing book.')
+  }
+})
+
 /* -------------------------- ORDERS ------------------------- */
 
 // GET CART
@@ -246,7 +267,6 @@ router.get('/orders', (req, res) => {
 router.post('/removeOrder', (req, res) => {
   const { id } = req.body
   const existingOrders = loadOrders()
-
   const filteredOrders = existingOrders.filter(order => order.id !== Number(id))
 
   try {

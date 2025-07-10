@@ -18,25 +18,5 @@
         "amount": 3
       }
     ]
-  },
-  {
-    "id": 1752164610430,
-    "data": "2025-07-10T16:23:30.430Z",
-    "items": [
-      {
-        "id": 1752164606289,
-        "name": "Milkshake Chocolate",
-        "image": "/images/Hot_Chocolate.png",
-        "date": "2025-07-10T16:23:21.119Z",
-        "amount": 3
-      },
-      {
-        "id": 1752164608752,
-        "name": "Espresso",
-        "image": "/images/espresso.jpg",
-        "date": "2025-07-10T16:23:27.533Z",
-        "amount": 1
-      }
-    ]
   }
 ]

@@ -6,7 +6,7 @@
     "genre": "Self-help",
     "description": "A practical guide to building good habits and breaking bad ones using proven scientific strategies.",
     "rating": 4.8,
-    "image": "https://covers.openlibrary.org/b/id/10523360-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/0735211299-L.jpg",
     "availability": true
   },
   {
@@ -16,7 +16,7 @@
     "genre": "Productivity",
     "description": "Teaches the value of deep, focused work and how it can help you achieve peak performance.",
     "rating": 4.5,
-    "image": "https://covers.openlibrary.org/b/id/8372216-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/1455586692-L.jpg",
     "availability": true
   },
   {
@@ -26,77 +26,107 @@
     "genre": "Fiction",
     "description": "A philosophical novel about a shepherd boy’s journey to find his personal legend.",
     "rating": 4.7,
-    "image": "https://covers.openlibrary.org/b/id/8231856-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/0062315005-L.jpg",
     "availability": false
   },
   {
     "id": 4,
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "genre": "Fiction",
+    "description": "A story of friendship and redemption set against the backdrop of a changing Afghanistan.",
+    "rating": 4.8,
+    "image": "/images/the-kite-runner-taschenbuch-khaled-hosseini-englisch.webp",
+    "availability": true
+  },
+  {
+    "id": 5,
+    "title": "A Thousand Splendid Suns",
+    "author": "Khaled Hosseini",
+    "genre": "Fiction",
+    "description": "A heartbreaking tale of two women’s friendship and survival amidst decades of war in Afghanistan.",
+    "rating": 4.7,
+    "image": "/images/a-thousand-splendid-suns-taschenbuch-khaled-hosseini-englisch.webp",
+    "availability": true
+  },
+  {
+    "id": 6,
+    "title": "And the Mountains Echoed",
+    "author": "Khaled Hosseini",
+    "genre": "Fiction",
+    "description": "A multi-generational story exploring the bonds between siblings and the sacrifices families make.",
+    "rating": 4.5,
+    "image": "/images/and-the-mountains-echoed-taschenbuch-khaled-hosseini-englisch.webp",
+    "availability": true
+  },
+  {
+    "id": 7,
     "title": "The Power of Now",
     "author": "Eckhart Tolle",
     "genre": "Spirituality",
     "description": "A spiritual guide to help you discover your true self by living fully in the present moment.",
     "rating": 4.6,
-    "image": "https://covers.openlibrary.org/b/id/8228691-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/1577314808-L.jpg",
     "availability": true
   },
   {
-    "id": 5,
+    "id": 8,
     "title": "Man’s Search for Meaning",
     "author": "Viktor E. Frankl",
     "genre": "Psychology",
     "description": "A Holocaust survivor’s reflections on finding meaning in life through suffering and purpose.",
     "rating": 4.9,
-    "image": "https://covers.openlibrary.org/b/id/10310193-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/0807014273-L.jpg",
     "availability": false
   },
   {
-    "id": 6,
+    "id": 9,
     "title": "Thinking, Fast and Slow",
     "author": "Daniel Kahneman",
     "genre": "Psychology",
     "description": "Explores the dual systems of thinking: fast, intuitive decisions and slow, deliberate reasoning.",
     "rating": 4.4,
-    "image": "https://covers.openlibrary.org/b/id/7278946-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/0374533555-L.jpg",
     "availability": true
   },
   {
-    "id": 7,
+    "id": 10,
     "title": "Start With Why",
     "author": "Simon Sinek",
     "genre": "Leadership",
     "description": "A powerful book about how great leaders inspire action by starting with why they do what they do.",
     "rating": 4.3,
-    "image": "https://covers.openlibrary.org/b/id/8155414-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/1591846447-L.jpg",
     "availability": true
   },
   {
-    "id": 8,
+    "id": 11,
     "title": "Educated",
     "author": "Tara Westover",
     "genre": "Memoir",
     "description": "A memoir about a woman who grew up in a survivalist family and eventually earned a PhD from Cambridge.",
     "rating": 4.8,
-    "image": "https://covers.openlibrary.org/b/id/9353794-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/0399590501-L.jpg",
     "availability": false
   },
   {
-    "id": 9,
+    "id": 12,
     "title": "Can’t Hurt Me",
     "author": "David Goggins",
     "genre": "Motivational",
     "description": "Navy SEAL David Goggins shares his life story and teaches mental toughness and discipline.",
     "rating": 4.7,
-    "image": "https://covers.openlibrary.org/b/id/10223628-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/1544512287-L.jpg",
     "availability": true
   },
   {
-    "id": 10,
+    "id": 13,
     "title": "Ikigai",
     "author": "Héctor García and Francesc Miralles",
     "genre": "Self-help",
     "description": "Explores the Japanese concept of Ikigai—your reason for being—and how it leads to a long and happy life.",
     "rating": 4.6,
-    "image": "https://covers.openlibrary.org/b/id/9270065-L.jpg",
+    "image": "https://covers.openlibrary.org/b/isbn/0143130722-L.jpg",
     "availability": true
   }
 ]

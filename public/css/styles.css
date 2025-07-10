@@ -90,6 +90,11 @@ button.checkout-btn:hover {
   background-color: #45a049;
 }
 
+.order-button.reserved {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
 /*-------------------ORDER END----------------*/
 
 /*-------------CART START----------------------*/
