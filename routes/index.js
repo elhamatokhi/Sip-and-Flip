@@ -70,17 +70,6 @@ router.get('/drinksMenu', (req, res) => {
 })
 
 // GET Drink Details
-// router.get('/orders/:id', (req, res) => {
-//   const orders = loadOrders()
-//   const ID = Number(req.params.id)
-//   const order = orders.find(o => o.id === ID)
-
-//   if (!order) {
-//     return res.status(404).send('Order not found')
-//   }
-
-//   res.render('drinkDetails', { order })
-// })
 
 router.get('/orders/:name', async (req, res) => {
   const orders = loadOrders()
