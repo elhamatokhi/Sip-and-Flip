@@ -194,6 +194,18 @@ router.post('/addToCart', (req, res) => {
   res.redirect('/cart')
 })
 
+// REMOVE FROM CART
+router.post('/removeFromCart', (req, res) => {
+  const { id } = req.body
+  if (req.session.currentorder) {
+    req.session.currentorder = req.session.currentorder.filter(
+      item => item.id !== parseInt(id)
+    )
+  }
+
+  res.redirect('/cart')
+})
+
 // POST ORDER
 router.post('/order', (req, res) => {
   const cartItems = req.session.currentorder || []
@@ -230,17 +242,25 @@ router.get('/orders', (req, res) => {
   res.render('order', { orders })
 })
 
-// REMOVE FROM CART
-router.post('/removeFromCart', (req, res) => {
+// Delete an order
+router.post('/removeOrder', (req, res) => {
   const { id } = req.body
-  if (req.session.currentorder) {
-    req.session.currentorder = req.session.currentorder.filter(
-      item => item.id !== parseInt(id)
-    )
-  }
+  const existingOrders = loadOrders()
 
-  res.redirect('/cart')
+  const filteredOrders = existingOrders.filter(order => order.id !== Number(id))
+
+  try {
+    fs.writeFileSync(
+      path.join(__dirname, '../data/orders.json'),
+      JSON.stringify(filteredOrders, null, 2)
+    )
+    res.redirect('/orders')
+  } catch (err) {
+    console.error('Error removing order:', err)
+    res.status(500).send('Error removing order.')
+  }
 })
+
 /*--------------------CONTACT----------------- */
 
 // Contact page

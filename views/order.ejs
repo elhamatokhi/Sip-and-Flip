@@ -23,6 +23,14 @@
       </div>
       <% }) %>
     </div>
+    <form
+      action="/removeOrder"
+      method="POST"
+      onsubmit="return confirm('Are you sure you want to remove this order?');"
+    >
+      <input type="hidden" name="id" value="<%= order.id %>" />
+      <button type="submit" class="btn btn-danger">Remove Order</button>
+    </form>
   </article>
   <% }) %> <% } %>
 </div>

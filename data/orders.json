@@ -20,27 +20,21 @@
     ]
   },
   {
-    "id": 1752163369691,
-    "data": "2025-07-10T16:02:49.691Z",
+    "id": 1752164610430,
+    "data": "2025-07-10T16:23:30.430Z",
     "items": [
       {
-        "id": 1752163366498,
+        "id": 1752164606289,
+        "name": "Milkshake Chocolate",
+        "image": "/images/Hot_Chocolate.png",
+        "date": "2025-07-10T16:23:21.119Z",
+        "amount": 3
+      },
+      {
+        "id": 1752164608752,
         "name": "Espresso",
         "image": "/images/espresso.jpg",
-        "date": "2025-07-10T16:02:43.578Z",
-        "amount": 3
-      }
-    ]
-  },
-  {
-    "id": 1752163398070,
-    "data": "2025-07-10T16:03:18.070Z",
-    "items": [
-      {
-        "id": 1752163396472,
-        "name": "Iced Coffee Sweet Heaven",
-        "image": "/images/Iced_Coffee_Sweet_Heaven.png",
-        "date": "2025-07-10T16:03:14.931Z",
+        "date": "2025-07-10T16:23:27.533Z",
         "amount": 1
       }
     ]

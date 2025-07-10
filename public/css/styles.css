@@ -17,7 +17,9 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 60rem;
+  max-width: 987px;
+  padding-bottom: 80px;
+  max-width: 987px;
   margin: 0 auto;
 }
 
@@ -92,9 +94,10 @@ button.checkout-btn:hover {
 
 /*-------------CART START----------------------*/
 .cart-container {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 987px;
+  padding-bottom: 80px; /* slightly more than footer height to avoid overlap */
+  max-width: 987px;
+  margin: 0 auto;
 }
 
 .cart-items-grid {
@@ -200,6 +203,41 @@ button.checkout-btn:hover {
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
   border-radius: 8px;
+}
+
+.cart-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.place-order-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.place-order-btn:hover {
+  background-color: #45a049;
+}
+
+.back-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #ccc;
+  color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #bbb;
 }
 
 /*-------------CART END----------------------*/
