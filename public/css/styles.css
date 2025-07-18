@@ -314,7 +314,7 @@ button.checkout-btn:hover {
   gap: 2rem;
   padding: 2rem;
   justify-content: space-between;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
 }
 
 .drink-card {
@@ -435,7 +435,7 @@ button.checkout-btn:hover {
   flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem;
-  padding-bottom: 5rem;
+  
 }
 @keyframes slideDown {
   from {
@@ -559,7 +559,7 @@ h1 {
   border-radius: 50%;
 }
 .main-container {
-  max-width: 50rem;
+ max-width: 50rem;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #fff8e1;
@@ -569,11 +569,10 @@ h1 {
   color: #333;
 }
 
-.main-container h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #5a3e1b;
+.footer-spacer {
+  height: 6rem;
 }
+
 
 .main-container .bestSeller,
 .main-container .week {
@@ -875,8 +874,8 @@ button {
 .contact_container {
   display: flex;
   flex-direction: column;
-  /* margin: 2rem auto; */
   margin-bottom: 5rem;
+  padding-bottom: 7rem;
 }
 .contact_container h1 {
   text-align: center;
@@ -936,11 +935,8 @@ button {
   max-width: 45rem;
   margin-inline: auto;
   line-height: 1.5;
-  padding-block: 1.5rem;
   font-size: 1.3rem;
-}
-.about-container h1 {
-  font-size: 2rem;
+  padding-bottom: 7rem;
 }
 
 /* For smaller screens */
@@ -984,7 +980,6 @@ button {
     width: auto;
   }
   .contact-form {
-    /* padding: 1.5rem; */
     width: 80%;
   }
   .reservedBooks-container,
@@ -992,5 +987,11 @@ button {
     justify-content: center;
     width: 18rem;
     margin: 0 auto;
+  }
+  .about-container{
+    font-size: medium;
+  }
+  .main-container{
+    margin: 2rem;
   }
 }
