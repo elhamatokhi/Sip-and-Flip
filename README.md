@@ -36,9 +36,9 @@ Sip & Flip is a tailored web app designed exclusively for a specific café, offe
 ### 1. Clone the repository
 
 ```bash
-   git clone https://gitlab.rz.htw-berlin.de/tokhi/sip-and-flip.git
+   git clone https://github.com/elhamatokhi/Sip-and-Flip.git
 
-   cd sip-and-flip
+   cd Sip-and-Flip
 ```
 
 2. Install dependencies
